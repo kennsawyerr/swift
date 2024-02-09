@@ -138,7 +138,7 @@ ul {
   border-radius: 200px;
 }
 
-.search-cont{
+.search-cont {
   background-color: #2654e4;
   border-radius: 69px;
   height: 72px;
@@ -653,4 +653,9 @@ article .biggerImg {
   font-style: normal;
   font-weight: 600;
   line-height: 36px; /* 180% */
+}
+
+/* responsive  */
+@media screen and (max-width: 992px){
+  
 }
