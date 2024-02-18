@@ -656,6 +656,15 @@ article .biggerImg {
 }
 
 /* responsive  */
-@media screen and (max-width: 992px){
-  
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .flex {
+    display: block;
+    width: 100%;
+  }
 }
