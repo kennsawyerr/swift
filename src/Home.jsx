@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 import bestTravelsFour from "./assets/bestTravelsFour.png";
 import planeImageone from "./assets/planeone.png";
@@ -31,7 +31,6 @@ function Home() {
           <ul className=" gap-20 flex">
             <li>Support</li>
             <li>Languages</li>
-            
           </ul>
 
           <ul className=" gap-20 flex">
@@ -78,11 +77,9 @@ function Home() {
               <li>First Class</li>
             </ul>
             <ul className="flex flight-location">
-
-           
               <li>
                 <div>
-                  <img src={menuImg}  />
+                  <img src={menuImg} />
                 </div>
                 <div>
                   <h3>Location</h3>
@@ -121,9 +118,8 @@ function Home() {
               </li>
               <li>
                 <div className="search-cont">
-                <img src={search} className="" alt="" />
+                  <img src={search} className="" alt="" />
                 </div>
-               
               </li>
             </ul>
           </section>
@@ -350,6 +346,13 @@ function Home() {
         </section>
 
         <div className="container">
+          {/* working with fetching api over here */}
+
+          <hr />
+
+          <hr />
+
+          {/* end */}
           <footer>
             <p className="p1">CONVINCED?</p>
             <h5>Lets travel the world together!</h5>
