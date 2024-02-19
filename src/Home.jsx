@@ -10,6 +10,10 @@ import skybg from "./assets/sky.jpg";
 import plane from "./assets/plane-mockup.png";
 import search from "./assets/search.png";
 
+// fetching api slot
+
+// end
+
 // social media
 import socialfb from "./assets/Fb.png";
 import socialig from "./assets/Ig.png";
@@ -22,7 +26,17 @@ import checkCircle from "./assets/checkcircle.png";
 import discountIcon from "./assets/discount.png";
 import "./App.css";
 
+// api url here
+const url = "https://course-api.com/react-tabs-project";
+
 function Home() {
+  const [newJobs, setNewJobs] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchJobs = async () => {
+    const response = await fetch(url);
+    const newJobs = await response.json();
+  };
   return (
     <>
       <nav>
@@ -347,6 +361,8 @@ function Home() {
 
         <div className="container">
           {/* working with fetching api over here */}
+          <h4>EXPERIENCE</h4>
+          
 
           <hr />
 
