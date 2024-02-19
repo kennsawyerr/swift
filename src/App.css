@@ -668,17 +668,16 @@ article .biggerImg {
   }
 }
 
-
-
-
 /* fetching api over here man at work park over there */
 
-hr{
+hr {
   width: 100%;
   border: 2px solid red;
   margin: 30px auto;
-  
 }
 
+.black {
+  color: black;
+}
 
 /* end */

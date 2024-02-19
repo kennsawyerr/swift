@@ -361,8 +361,8 @@ function Home() {
 
         <div className="container">
           {/* working with fetching api over here */}
-          <h4>EXPERIENCE</h4>
-          
+          <h4 className="black">EXPERIENCE</h4>
+
 
           <hr />
 
