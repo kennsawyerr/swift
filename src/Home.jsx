@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import FaAngleDoubleRight from "./assets/search.png";
 import bestTravelsFour from "./assets/bestTravelsFour.png";
 import planeImageone from "./assets/planeone.png";
 import planeImagetwo from "./assets/planetwo.png";
@@ -9,10 +9,6 @@ import menuImg from "./assets/menu.png";
 import skybg from "./assets/sky.jpg";
 import plane from "./assets/plane-mockup.png";
 import search from "./assets/search.png";
-
-// fetching api slot
-
-// end
 
 // social media
 import socialfb from "./assets/Fb.png";
@@ -30,13 +26,30 @@ import "./App.css";
 const url = "https://course-api.com/react-tabs-project";
 
 function Home() {
-  const [newJobs, setNewJobs] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+  // fetching api over here
+  const [loading, setLoading] = useState(true);
+  const [jobs, setJobs] = useState([]);
+  const [value, setValue] = useState(0);
 
   const fetchJobs = async () => {
     const response = await fetch(url);
     const newJobs = await response.json();
+    setJobs(newJobs);
+    setLoading(false);
   };
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+  if (loading) {
+    return (
+      <section className="section loading">
+        <h1 className="black">Loading...</h1>
+      </section>
+    );
+  }
+  const { company, dates, duties, title } = jobs[value];
+  // alert(jobs[value]);
+  // console.log(jobs[value]);
   return (
     <>
       <nav>
@@ -363,8 +376,33 @@ function Home() {
           {/* working with fetching api over here */}
           <h4 className="black">EXPERIENCE</h4>
 
-
           <hr />
+          <section>
+            {jobs.map((item, index) => {
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setValue(index)}
+                  className={`job-btn ${index === value && "active-btn"}`}
+                >
+                  {item.company}
+                </button>
+              );
+            })}
+            {/* job info */}
+            <article className="job-info">
+              <h3>{title}</h3>
+              <h4>{company}</h4>
+              <p className="job-date">{dates}</p>
+              {duties.map((duty, index) => {
+                return (
+                  <div key={index} className="job-desc">
+                    <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                  </div>
+                );
+              })}
+            </article>
+          </section>
 
           <hr />
 
