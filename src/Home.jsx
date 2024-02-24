@@ -27,50 +27,58 @@ const url = "https://course-api.com/react-tabs-project";
 
 function Home() {
   // fetching api over here
-  const [loading, setLoading] = useState(true);
-  const [jobs, setJobs] = useState([]);
-  const [value, setValue] = useState(0);
+  // const [loading, setLoading] = useState(true);
+  // const [jobs, setJobs] = useState([]);
+  // const [value, setValue] = useState(0);
 
-  const fetchJobs = async () => {
-    const response = await fetch(url);
-    const newJobs = await response.json();
-    setJobs(newJobs);
-    setLoading(false);
-  };
+  const [jobs, setJobs] = useState([]);
+  const [selectedCompany, setSelectedCompany] = useState(null);
+
+  // const fetchJobs = async () => {
+  //   const response = await fetch(url);
+  //   const newJobs = await response.json();
+  //   setJobs(newJobs);
+  //   // setLoading(false);
+  // };
   useEffect(() => {
     fetchJobs();
   }, []);
-  if (loading) {
-    return (
-      <section className="section loading">
-        <h1 className="black">Loading...</h1>
-      </section>
-    );
-  }
-  const { company, dates, duties, title } = jobs[value];
+
+  const fetchJobs = async () => {
+    try {
+      const response = await fetch("https://course-api.com/react-tabs-project");
+      const data = await response.json();
+      setJobs(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const handleCompanyClick = (company) => {
+    setSelectedCompany(company);
+  };
+
+  // useEffect(() => {
+  //   fetchJobs();
+  // }, []);
+  // console.log(jobs);
+  // console.log(jobs[value]);
+  // if (loading) {
+  //   return (
+  //     <section className="section loading">
+  //       <h1 className="black">Loading...</h1>
+  //     </section>
+  //   );
+  // }
+  // const { company, dates, duties, title } = jobs[value];
   // alert(jobs[value]);
   // console.log(jobs[value]);
   return (
     <>
-      <nav>
-        <div className="container flex">
-          <img src={menuImg} alt="" />
-          <ul className=" gap-20 flex">
-            <li>Support</li>
-            <li>Languages</li>
-          </ul>
-
-          <ul className=" gap-20 flex">
-            <li>Sign up</li>
-            <li>Sign in</li>
-          </ul>
-        </div>
-      </nav>
-
       <div className="container">
         <div className="main-navbar flex">
           <div>
-            <div className="logo-header">namaste</div>
+            <div className="logo-header">Swift</div>
             <div className="logo-header_sub">FLIGHT BOOKING AGENCY</div>
           </div>
 
@@ -375,10 +383,42 @@ function Home() {
         <div className="container">
           {/* working with fetching api over here */}
           <h4 className="black">EXPERIENCE</h4>
-
+          <div>
+            <h1>Jobs</h1>
+            <div>
+              {jobs.map((job, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleCompanyClick(job.company)}
+                >
+                  {job.company}
+                </button>
+              ))}
+            </div>
+            {selectedCompany && (
+              <div>
+                <h2>{selectedCompany}</h2>
+                <div>
+                  {jobs
+                    .filter((job) => job.company === selectedCompany)
+                    .map((job, index) => (
+                      <article key={index}>
+                        <h3>{job.title}</h3>
+                        <p>{job.dates}</p>
+                        <ul>
+                          {job.duties.map((duty, index) => (
+                            <li key={index}>{duty}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    ))}
+                </div>
+              </div>
+            )}
+          </div>
           <hr />
           <section>
-            {jobs.map((item, index) => {
+            {/* {jobs.map((item, index) => {
               return (
                 <button
                   key={item.id}
@@ -389,18 +429,19 @@ function Home() {
                 </button>
               );
             })}
-            {/* job info */}
+            job info */}
+
             <article className="job-info">
-              <h3>{title}</h3>
-              <h4>{company}</h4>
-              <p className="job-date">{dates}</p>
-              {duties.map((duty, index) => {
+              {/* <h3>{title}</h3> */}
+              {/* <h4>{company}</h4> */}
+              {/* <p className="job-date">{dates}</p> */}
+              {/* {duties.map((duty, index) => {
                 return (
                   <div key={index} className="job-desc">
                     <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
                   </div>
                 );
-              })}
+              })} */}
             </article>
           </section>
 
@@ -420,7 +461,7 @@ function Home() {
             <hr />
             <div className="flex footer-last-elem">
               <div>
-                <div className="logo-header white">namaste</div>
+                <div className="logo-header white">swift</div>
                 <div className="logo-header_sub white">
                   FLIGHT BOOKING AGENCY
                 </div>

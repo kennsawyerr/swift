@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   background-color: #fff;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Inter";
 }
 
@@ -59,13 +64,17 @@ ul {
 }
 .container {
   width: 100%;
-  max-width: 1300px;
+  width: 1300px;
+  margin: 0 auto;
+}
+
+main {
   margin: 0 auto;
 }
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .logo-header {
   color: #000;
@@ -164,6 +173,7 @@ ul {
   display: flex;
   align-items: flex-start;
   gap: 56px;
+  color: black;
 }
 .flight-location li {
   display: flex;
@@ -654,6 +664,18 @@ article .biggerImg {
   line-height: 36px; /* 180% */
 }
 
+@media screen and (max-width: 600px) {
+  .logistics-table {
+    width: 100%;
+    padding: 40px 10px;
+    max-width: 500px;
+  }
+  .container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
 /* responsive  */
 @media screen and (max-width: 992px) {
   .container {
@@ -665,6 +687,43 @@ article .biggerImg {
   .flex {
     display: block;
     width: 100%;
+  }
+  .img-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 400px;
+  }
+
+  .sky-bg {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .plane {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+  }
+
+  .logistics-table {
+    width: 100%;
+    padding: 40px 10px;
+    max-width: 900px;
+  }
+  .flight-class-levels {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .flight-location {
+    display: flex;
+
+    margin: 0 auto;
+  }
+  .flight-location li {
+    padding: 2px;
   }
 }
 
