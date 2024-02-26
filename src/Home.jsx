@@ -20,10 +20,11 @@ import userIcon from "./assets/user.png";
 import calendarTwo from "./assets/calTwo.png";
 import checkCircle from "./assets/checkcircle.png";
 import discountIcon from "./assets/discount.png";
+import Flightclass from "./flights";
 import "./App.css";
 
 // api url here
-const url = "https://course-api.com/react-tabs-project";
+
 
 function Home() {
   // fetching api over here
@@ -31,8 +32,6 @@ function Home() {
   // const [jobs, setJobs] = useState([]);
   // const [value, setValue] = useState(0);
 
-  const [jobs, setJobs] = useState([]);
-  const [selectedCompany, setSelectedCompany] = useState(null);
 
   // const fetchJobs = async () => {
   //   const response = await fetch(url);
@@ -40,23 +39,11 @@ function Home() {
   //   setJobs(newJobs);
   //   // setLoading(false);
   // };
-  useEffect(() => {
-    fetchJobs();
-  }, []);
+ 
 
-  const fetchJobs = async () => {
-    try {
-      const response = await fetch("https://course-api.com/react-tabs-project");
-      const data = await response.json();
-      setJobs(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  
 
-  const handleCompanyClick = (company) => {
-    setSelectedCompany(company);
-  };
+ 
 
   // useEffect(() => {
   //   fetchJobs();
@@ -75,6 +62,7 @@ function Home() {
   // console.log(jobs[value]);
   return (
     <>
+    <Flightclass/>
       <div className="container">
         <div className="main-navbar flex">
           <div>
@@ -275,7 +263,7 @@ function Home() {
           </div>
         </section>
 
-        <article className="flex">
+        <article className="flex container">
           <div className="image-cont-3">
             <img src={planeImageone} alt="" className="biggerImg" />
 
@@ -382,41 +370,9 @@ function Home() {
 
         <div className="container">
           {/* working with fetching api over here */}
-          <h4 className="black">EXPERIENCE</h4>
-          <div>
-            <h1>Jobs</h1>
-            <div>
-              {jobs.map((job, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleCompanyClick(job.company)}
-                >
-                  {job.company}
-                </button>
-              ))}
-            </div>
-            {selectedCompany && (
-              <div>
-                <h2>{selectedCompany}</h2>
-                <div>
-                  {jobs
-                    .filter((job) => job.company === selectedCompany)
-                    .map((job, index) => (
-                      <article key={index}>
-                        <h3>{job.title}</h3>
-                        <p>{job.dates}</p>
-                        <ul>
-                          {job.duties.map((duty, index) => (
-                            <li key={index}>{duty}</li>
-                          ))}
-                        </ul>
-                      </article>
-                    ))}
-                </div>
-              </div>
-            )}
-          </div>
-          <hr />
+         
+       
+      
           <section>
             {/* {jobs.map((item, index) => {
               return (

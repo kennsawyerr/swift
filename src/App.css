@@ -63,15 +63,22 @@ ul {
   gap: 40px;
 }
 .container {
-  width: 100%;
-  width: 1300px;
-  margin: 0 auto;
+  width: 100%; /* Ensures container takes full width of its parent */
+  max-width: 1000px; /* Optional: Set a maximum width for the container */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 20px; /* Optional: Add padding to the container */
+  box-sizing: border-box;
 }
 
 main {
   margin: 0 auto;
 }
 .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,6 +91,7 @@ main {
   font-weight: 400;
   line-height: normal;
 }
+
 .logo-header_sub {
   color: #000;
   font-family: "Inter";
@@ -167,6 +175,7 @@ main {
   color: #fff;
 }
 .logistics-table li {
+  padding: 8px;
 }
 
 .flight-location {
@@ -728,12 +737,6 @@ article .biggerImg {
 }
 
 /* fetching api over here man at work park over there */
-
-hr {
-  width: 100%;
-  border: 2px solid red;
-  margin: 30px auto;
-}
 
 .black {
   color: black;
