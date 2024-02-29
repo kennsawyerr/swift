@@ -9,19 +9,18 @@ function Navbar() {
   };
   return (
     <>
+      {/* {<ul className=" gap-20 flex ">} */}
       <nav>
         <div className="container flex">
           <div className="menu-btn">
             <img src={menuImg} onClick={toggleNavbar} alt="" />
           </div>
-          <ul className=" gap-20 flex ">
-            <li className="collapse-nav">Support</li>
-            <li className="collapse-nav"> Languages</li>
-          </ul>
+          <ul className={`nav__menu ${collapse ? "collapse-nav" : ""}`}>
+            <li className="">Support</li>
+            <li className=""> Languages</li>
 
-          <ul className=" gap-20 flex ">
-            <li className="collapse-nav">Sign up</li>
-            <li className="collapse-nav">Sign in</li>
+            <li className="">Sign up</li>
+            <li className="">Sign in</li>
           </ul>
         </div>
       </nav>

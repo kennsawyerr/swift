@@ -619,10 +619,6 @@ article .biggerImg {
   line-height: 96px; /* 150% */
 }
 
-.lounge li {
-  /* border: 2px solid green; */
-}
-
 .lounge li h4 {
   color: #000;
 
@@ -675,6 +671,14 @@ article .biggerImg {
 .menu-btn {
   display: none;
 }
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  padding: 0 20px;
+}
 
 @media screen and (max-width: 600px) {
   .logistics-table {
@@ -688,12 +692,24 @@ article .biggerImg {
     margin: 0 auto;
   }
 
-  .menu-btn {
-    display: block;
-  }
-
   .collapse-nav {
     display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    width: 29px;
+    align-self: flex-start;
+  }
+
+  .nav__menu {
+    display: block;
+    align-self: flex-start;
+    padding: 10px 0 0px;
+    margin: auto 20px;
+    backdrop-filter: blur(100px);
+    background-color: red;
+    width: 100%;
   }
   .flex {
     display: flex;
@@ -701,12 +717,16 @@ article .biggerImg {
     width: 100%;
   }
 }
+
 /* responsive  */
 @media screen and (max-width: 992px) {
   .container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+  }
+  .collapse-nav {
+    display: none;
   }
 
   .menu-btn {
@@ -766,6 +786,3 @@ article .biggerImg {
 /* end */
 
 /* navbar */
-
-.collapse-nav {
-}
