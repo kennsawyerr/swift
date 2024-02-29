@@ -672,6 +672,9 @@ article .biggerImg {
   font-weight: 600;
   line-height: 36px; /* 180% */
 }
+.menu-btn {
+  display: none;
+}
 
 @media screen and (max-width: 600px) {
   .logistics-table {
@@ -684,6 +687,19 @@ article .biggerImg {
     max-width: 500px;
     margin: 0 auto;
   }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .collapse-nav {
+    display: none;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 /* responsive  */
 @media screen and (max-width: 992px) {
@@ -693,8 +709,13 @@ article .biggerImg {
     margin: 0 auto;
   }
 
-  .flex {
+  .menu-btn {
     display: block;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
   .img-cont {
@@ -743,3 +764,8 @@ article .biggerImg {
 }
 
 /* end */
+
+/* navbar */
+
+.collapse-nav {
+}

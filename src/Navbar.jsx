@@ -1,18 +1,27 @@
+import { useState } from "react";
 import menuImg from "./assets/menu.png";
+
 function Navbar() {
+  const [collapse, setCollapse] = useState(false);
+
+  const toggleNavbar = () => {
+    setCollapse(!collapse);
+  };
   return (
     <>
       <nav>
         <div className="container flex">
-          <img src={menuImg} alt="" />
-          <ul className=" gap-20 flex">
-            <li>Support</li>
-            <li>Languages</li>
+          <div className="menu-btn">
+            <img src={menuImg} onClick={toggleNavbar} alt="" />
+          </div>
+          <ul className=" gap-20 flex ">
+            <li className="collapse-nav">Support</li>
+            <li className="collapse-nav"> Languages</li>
           </ul>
 
-          <ul className=" gap-20 flex">
-            <li>Sign up</li>
-            <li>Sign in</li>
+          <ul className=" gap-20 flex ">
+            <li className="collapse-nav">Sign up</li>
+            <li className="collapse-nav">Sign in</li>
           </ul>
         </div>
       </nav>

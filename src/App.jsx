@@ -49,8 +49,7 @@ export default App; */
 function App() {
   return (
     <>
-      {/* <Navbar />
-      <Home /> */}
+  
 
       <Router>
             <Navbar />
