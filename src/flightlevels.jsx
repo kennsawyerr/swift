@@ -2,30 +2,30 @@ import { useState } from "react";
 import menuImg from "./assets/menu.png";
 import search from "./assets/search.png";
 import userIcon from "./assets/user.png";
-import calendar from "./assets/calTwo.png"
+import calendar from "./assets/calTwo.png";
 
 function FlightBooking() {
-  const [showTravelComfort, setShowTravelComfort] = useState(false);
+  // const [showTravelComfort, setShowTravelComfort] = useState(false);
   const [showAppetizers, setShowAppetizers] = useState(false);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showSeats, setShowSeats] = useState(false);
 
   const economy = () => {
-    setShowTravelComfort(false);
+    // setShowTravelComfort(false);
     setShowAppetizers(false);
     setShowAmenities(false);
     setShowSeats(false);
   };
 
   const business = () => {
-    setShowTravelComfort(true);
+    // setShowTravelComfort(true);
     setShowAppetizers(true);
     setShowAmenities(true);
     setShowSeats(false);
   };
 
   const firstClass = () => {
-    setShowTravelComfort(true);
+    // setShowTravelComfort(true);
     setShowAppetizers(true);
     setShowAmenities(true);
     setShowSeats(true);
@@ -89,12 +89,12 @@ function FlightBooking() {
         </ul>
 
         <div className="flex flight-perks">
-          <div
+          {/* <div
             id="travel-comfort"
             style={{ display: showTravelComfort ? "block" : "none" }}
           >
             Travel
-          </div>
+          </div> */}
           <div
             id="appetizers"
             style={{ display: showAppetizers ? "block" : "none" }}
