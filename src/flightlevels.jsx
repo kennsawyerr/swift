@@ -41,6 +41,7 @@ function FlightBooking() {
           </li>
           <li onClick={firstClass}>First Class</li>
         </ul>
+        <hr />
         <ul className="flex flight-location">
           <li>
             <div>
@@ -87,7 +88,7 @@ function FlightBooking() {
             </div>
           </li>
         </ul>
-
+        <hr />
         <div className="flex flight-perks">
           {/* <div
             id="travel-comfort"
