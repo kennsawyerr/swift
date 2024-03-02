@@ -547,6 +547,14 @@ hr {
   color: #fff;
 }
 
+.flight-class-levels li {
+  cursor: pointer;
+}
+
+.flight-class-levels li:hover {
+  background-color: blue;
+}
+
 .image-cont-3 {
   position: relative;
   min-width: 500px;
@@ -678,6 +686,10 @@ article .biggerImg {
 
 nav li {
   padding: 0 20px;
+}
+
+.margin-l {
+  margin-left: auto;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import FaAngleDoubleRight from "./assets/search.png";
+// import FaAngleDoubleRight from "./assets/search.png";
 import bestTravelsFour from "./assets/bestTravelsFour.png";
 import planeImageone from "./assets/planeone.png";
 import planeImagetwo from "./assets/planetwo.png";
@@ -20,49 +20,16 @@ import userIcon from "./assets/user.png";
 import calendarTwo from "./assets/calTwo.png";
 import checkCircle from "./assets/checkcircle.png";
 import discountIcon from "./assets/discount.png";
-import Flightclass from "./flights";
+import FlightLevels from "./flightlevels";
 import "./App.css";
 
 // api url here
 
-
 function Home() {
-  // fetching api over here
-  // const [loading, setLoading] = useState(true);
-  // const [jobs, setJobs] = useState([]);
-  // const [value, setValue] = useState(0);
 
-
-  // const fetchJobs = async () => {
-  //   const response = await fetch(url);
-  //   const newJobs = await response.json();
-  //   setJobs(newJobs);
-  //   // setLoading(false);
-  // };
- 
-
-  
-
- 
-
-  // useEffect(() => {
-  //   fetchJobs();
-  // }, []);
-  // console.log(jobs);
-  // console.log(jobs[value]);
-  // if (loading) {
-  //   return (
-  //     <section className="section loading">
-  //       <h1 className="black">Loading...</h1>
-  //     </section>
-  //   );
-  // }
-  // const { company, dates, duties, title } = jobs[value];
-  // alert(jobs[value]);
-  // console.log(jobs[value]);
   return (
     <>
-    <Flightclass/>
+      <FlightLevels />
       <div className="container">
         <div className="main-navbar flex">
           <div>
@@ -370,9 +337,7 @@ function Home() {
 
         <div className="container">
           {/* working with fetching api over here */}
-         
-       
-      
+
           <section>
             {/* {jobs.map((item, index) => {
               return (

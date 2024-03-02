@@ -19,7 +19,7 @@ function Navbar() {
             <li className="">Support</li>
             <li className=""> Languages</li>
 
-            <li className="">Sign up</li>
+            <li className="margin-l">Sign up</li>
             <li className="">Sign in</li>
           </ul>
         </div>
