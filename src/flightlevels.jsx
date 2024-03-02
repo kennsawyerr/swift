@@ -1,8 +1,8 @@
 import { useState } from "react";
 import search from "./assets/search.png";
 import userIcon from "./assets/user.png";
-import calendar from "./assets/calTwo.png"
-import locationIcon from "./assets/location-marker-icon.png"
+import calendar from "./assets/calendar.png";
+import locationIcon from "./assets/location-marker-icon.png";
 
 function FlightBooking() {
   // const [showTravelComfort, setShowTravelComfort] = useState(false);
