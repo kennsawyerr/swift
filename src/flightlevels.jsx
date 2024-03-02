@@ -1,8 +1,8 @@
 import { useState } from "react";
-import menuImg from "./assets/menu.png";
 import search from "./assets/search.png";
 import userIcon from "./assets/user.png";
-import calendar from "./assets/calTwo.png";
+import calendar from "./assets/calTwo.png"
+import locationIcon from "./assets/location-marker-icon.png"
 
 function FlightBooking() {
   // const [showTravelComfort, setShowTravelComfort] = useState(false);
@@ -44,7 +44,7 @@ function FlightBooking() {
         <ul className="flex flight-location">
           <li>
             <div>
-              <img src={menuImg} />
+              <img src={locationIcon} />
             </div>
             <div>
               <h3>Location</h3>
