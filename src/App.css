@@ -552,7 +552,9 @@ hr {
 }
 
 .flight-class-levels li:hover {
-  background-color: blue;
+  background-color: black;
+  border-radius: 12px;
+  color: white;
 }
 .flight-perks {
   gap: 10px;
