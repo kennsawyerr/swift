@@ -88,7 +88,7 @@ function FlightBooking() {
           </li>
         </ul>
 
-        <div>
+        <div className="flex flight-perks">
           <div
             id="travel-comfort"
             style={{ display: showTravelComfort ? "block" : "none" }}
@@ -99,7 +99,7 @@ function FlightBooking() {
             id="appetizers"
             style={{ display: showAppetizers ? "block" : "none" }}
           >
-            Appe
+            Appetizers
           </div>
           <div
             id="amenities"

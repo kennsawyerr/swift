@@ -554,6 +554,10 @@ hr {
 .flight-class-levels li:hover {
   background-color: blue;
 }
+.flight-perks {
+  gap: 10px;
+  justify-content: space-evenly;
+}
 
 .image-cont-3 {
   position: relative;
