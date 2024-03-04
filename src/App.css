@@ -708,6 +708,18 @@ nav li {
   align-items: center;
   justify-content: space-between;
 }
+.grid-cont {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* 2 columns, each with minimum width 200px */
+  grid-template-rows: repeat(
+    3,
+    auto
+  ); /* 3 rows, automatically adjust based on content */
+  grid-gap: 20px;
+}
 
 @media screen and (max-width: 600px) {
   .logistics-table {

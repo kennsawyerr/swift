@@ -26,7 +26,6 @@ import "./App.css";
 // api url here
 
 function Home() {
-
   return (
     <>
       <FlightLevels />
@@ -285,7 +284,7 @@ function Home() {
             </h3>
 
             <div>
-              <ul className="flex ">
+              <ul className="grid-cont ">
                 <li className="bestTravel">
                   <div className="image-mth-cont">
                     <img src={bestTravelsFour} alt="" className="month-img" />
