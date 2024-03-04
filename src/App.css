@@ -165,10 +165,6 @@ main {
   display: flex;
 }
 
-.flight-class-levels li {
-  padding: 12px 19px;
-}
-
 .selected {
   border: 1px solid transparent;
   border-radius: 200px;
@@ -181,7 +177,7 @@ main {
 .flight-location {
   display: flex;
   align-items: flex-start;
-  gap: 56px;
+  gap: 30px;
   color: black;
 }
 .flight-location li {
@@ -191,7 +187,14 @@ main {
   justify-content: space-between;
   gap: 10px;
 }
+.perks {
+  cursor: pointer;
+}
 
+.flight-location li {
+  flex-grow: 1;
+  margin: 0 calc(1px + 1vw);
+}
 .flight-location p {
   font-size: 14px;
   color: #808080;
@@ -375,7 +378,9 @@ ul {
 
 hr {
   background-color: rgba(0, 0, 0, 0.5);
-  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* border: none; */
+  width: 100%;
 }
 
 .travel-plane-cont {
@@ -549,15 +554,15 @@ hr {
 
 .flight-class-levels li {
   cursor: pointer;
+  padding: 12px 19px;
+  margin: 3px 10px;
 }
 
 .flight-class-levels li:hover {
   background-color: black;
-  border-radius: 12px;
-  color: white;
-}
-.flight-perks {
-  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 200px;
+  color: #fff;
 }
 
 .image-cont-3 {
@@ -697,6 +702,13 @@ nav li {
   margin-left: auto;
 }
 
+.navMenu {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 600px) {
   .logistics-table {
     width: 100%;
@@ -707,6 +719,18 @@ nav li {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  .navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    width: 100%;
+  }
+
+  .navMenu li {
+    padding: 4px;
   }
 
   .collapse-nav {
@@ -781,7 +805,7 @@ nav li {
   }
   .flight-class-levels {
     display: flex;
-    width: 80%;
+
     margin: 0 auto;
   }
   .flight-location {

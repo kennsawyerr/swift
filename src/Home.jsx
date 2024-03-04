@@ -37,7 +37,7 @@ function Home() {
             <div className="logo-header_sub">FLIGHT BOOKING AGENCY</div>
           </div>
 
-          <ul className="navMenu flex">
+          <ul className="navMenu">
             <li>Home</li>
             <li>About</li>
             <li>Offers</li>
