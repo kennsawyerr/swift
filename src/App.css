@@ -730,6 +730,7 @@ nav li {
   .container {
     width: 100%;
     max-width: 500px;
+    overflow: hidden;
     margin: 0 auto;
   }
 
@@ -776,6 +777,7 @@ nav li {
   .container {
     width: 100%;
     max-width: 800px;
+    overflow: hidden;
     margin: 0 auto;
   }
   .collapse-nav {
