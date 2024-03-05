@@ -8,6 +8,9 @@ import Navbar from "./Navbar";
 import Blogs from "./Navbar";
 import SignUp from "./SIgnUp";
 import AllFlights from "./allFlights";
+import Seats from "./Seats";
+import Appetizers from "./Appetizers";
+import Ammenities from "./Ammenities";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
 
             <Route path="/flights" element={<AllFlights />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/seats" element={<Seats />} />
+            <Route path="/appetizers" element={<Appetizers />} />
+            <Route path="/ammenities" element={<Ammenities />} />
           </Routes>
         </Router>
       </div>
