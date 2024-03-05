@@ -11,7 +11,7 @@ function Navbar() {
     <>
       {/* {<ul className=" gap-20 flex ">} */}
       <nav>
-        <div className="container flex">
+        <div className=" flex">
           <div className="menu-btn">
             <img src={menuImg} onClick={toggleNavbar} alt="" />
           </div>

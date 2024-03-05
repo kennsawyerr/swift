@@ -15,7 +15,7 @@ import Ammenities from "./Ammenities";
 function App() {
   return (
     <>
-      <div className="container">
+      <div className="">
         <Router>
           <Navbar />
           <Routes>

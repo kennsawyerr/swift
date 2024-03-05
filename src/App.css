@@ -482,7 +482,8 @@ hr {
 
 .memories .cards {
   display: flex;
-  width: 387px;
+  max-width: 387px;
+  width: 100%;
   height: 520px;
   padding: 0px 32px;
   flex-direction: column;
@@ -768,6 +769,31 @@ aside {
     padding: 4px;
   }
 
+  .hero-text span,
+  .hero-text,
+  .travel-supp h3 {
+    font-size: 40px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .lounge h2,
+  .memories h1,
+  .memories span {
+    font-size: 35px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .memories h1,
+  .memories span {
+    padding-top: 20px;
+  }
+
+  .cont-cards {
+    flex-direction: column;
+  }
+
   .collapse-nav {
     display: none;
   }
@@ -807,6 +833,14 @@ aside {
   .newsletter h1 {
     font-size: 19px;
     padding: 30px;
+  }
+
+  .biggerImg {
+    width: 280px;
+  }
+
+  .smallImg {
+    width: 180px;
   }
 }
 
