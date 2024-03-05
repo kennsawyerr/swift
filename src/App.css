@@ -209,6 +209,7 @@ footer {
   text-align: center;
 }
 .social-m-icons {
+  display: flex;
 }
 
 .flex2 {
@@ -737,6 +738,14 @@ aside {
     padding: 40px 10px;
     max-width: 500px;
   }
+
+  .social-m-icons {
+    margin: 30px auto;
+  }
+
+  .newsletter {
+    padding: 10px;
+  }
   .container {
     width: 100%;
     max-width: 500px;
@@ -752,6 +761,9 @@ aside {
     width: 100%;
   }
 
+  footer .p2 {
+    width: 100%;
+  }
   .navMenu li {
     padding: 4px;
   }
@@ -792,6 +804,10 @@ aside {
     font-size: 20px;
     margin: 6px auto;
   }
+  .newsletter h1 {
+    font-size: 19px;
+    padding: 30px;
+  }
 }
 
 /* responsive  */
@@ -801,6 +817,20 @@ aside {
     max-width: 800px;
     overflow: hidden;
     margin: 0 auto;
+  }
+
+  .social-m-icons {
+    margin: 30px auto;
+  }
+  .newsletter {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .newsletter h1 {
+    font-size: 19px;
+    padding: 30px;
+    line-height: normal;
   }
   .collapse-nav {
     display: none;

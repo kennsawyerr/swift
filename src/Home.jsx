@@ -387,7 +387,7 @@ function Home() {
                 </div>
               </div>
               <small> &#169; 2020 Rayna. All rights reserved</small>
-              <ul className="social-m-icons flex">
+              <ul className="social-m-icons">
                 <li>
                   <img src={socialfb} alt="" />
                 </li>
