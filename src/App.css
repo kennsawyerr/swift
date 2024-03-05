@@ -694,10 +694,20 @@ article .biggerImg {
   justify-content: space-between;
 }
 
+.black-bg {
+  color: white;
+  background-color: #000;
+}
 nav li {
   padding: 0 20px;
 }
 
+aside {
+  /* width: 50%;
+  margin: 0 auto;
+  gap: 6px; */
+  padding-inline-end: 10px;
+}
 .margin-l {
   margin-left: auto;
 }

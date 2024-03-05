@@ -3,14 +3,19 @@ import search from "./assets/search.png";
 import userIcon from "./assets/user.png";
 import calendar from "./assets/calendar.png";
 import locationIcon from "./assets/location-marker-icon.png";
-import plusIcon from "./assets/location-marker-icon.png";
-import minusIcon from "./assets/location-marker-icon.png";
+
+import { AddSquare, MinusSquare } from "iconsax-react";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function FlightBooking() {
   // const [showTravelComfort, setShowTravelComfort] = useState(false);
   const [showAppetizers, setShowAppetizers] = useState(false);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showSeats, setShowSeats] = useState(false);
+  const [departureDate, setDepartureDate] = useState(null);
+  const [returningDate, setReturningDate] = useState(null);
+  // const [passengerValue, setPassengerValue] = useState(false);
 
   const economy = () => {
     // setShowTravelComfort(false);
@@ -32,6 +37,10 @@ function FlightBooking() {
     setShowAmenities(true);
     setShowSeats(true);
   };
+
+  const addNum = () => {};
+
+  const minusNum = () => {};
 
   return (
     <>
@@ -60,14 +69,13 @@ function FlightBooking() {
             <div>
               <img src={userIcon} alt="" />
             </div>
-            <div>
-              {/* npm install react-icons --save */}
+            <div className="">
               <h3>Travellers</h3>
-              <p>Add guests</p>
-              <aside>
-                <img src={plusIcon} alt="" />
-                <div></div>
-                <img src={minusIcon} alt="" />
+              {/* <p>Add guests</p> */}
+              <aside className="flex">
+                <MinusSquare color="#2654E4" onClick={minusNum} />
+                <div>0</div>
+                <AddSquare color="#2654E4" onClick={addNum} />
               </aside>
             </div>
           </li>
@@ -79,6 +87,17 @@ function FlightBooking() {
             <div>
               <h3>Check in</h3>
               <p>Add dates</p>
+              <ReactDatePicker
+                selected={departureDate}
+                onChange={(date) => setDepartureDate(date)}
+                dateFormat="MM/dd/yyyy"
+                placeholderText="Select a date"
+              />
+              {/* <input
+                name="todays_date"
+                onfocus="showCalendarControl(this)"
+                type="text"
+              /> */}
             </div>
           </li>
 
@@ -89,6 +108,12 @@ function FlightBooking() {
             <div>
               <h3>Check out</h3>
               <p>Add dates</p>
+              <ReactDatePicker
+                selected={returningDate}
+                onChange={(date) => setReturningDate(date)}
+                dateFormat="MM/dd/yyyy"
+                placeholderText="Select a date"
+              />
             </div>
           </li>
           <li>
