@@ -9,38 +9,40 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function FlightBooking() {
-  // const [showTravelComfort, setShowTravelComfort] = useState(false);
   const [showAppetizers, setShowAppetizers] = useState(false);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showSeats, setShowSeats] = useState(false);
   const [departureDate, setDepartureDate] = useState(null);
   const [returningDate, setReturningDate] = useState(null);
-  // const [passengerValue, setPassengerValue] = useState(false);
+  const [passengerValue, setPassengerValue] = useState(false);
 
   const economy = () => {
-    // setShowTravelComfort(false);
     setShowAppetizers(false);
     setShowAmenities(false);
     setShowSeats(false);
   };
 
   const business = () => {
-    // setShowTravelComfort(true);
     setShowAppetizers(true);
     setShowAmenities(true);
     setShowSeats(false);
   };
 
   const firstClass = () => {
-    // setShowTravelComfort(true);
     setShowAppetizers(true);
     setShowAmenities(true);
     setShowSeats(true);
   };
 
-  const addNum = () => {};
+  const addNum = () => {
+    setPassengerValue((prevCount) => prevCount + 1);
+  };
 
-  const minusNum = () => {};
+  const minusNum = () => {
+    if (passengerValue > 1) {
+      setPassengerValue((prevCount) => prevCount - 1);
+    }
+  };
 
   return (
     <>
@@ -74,7 +76,7 @@ function FlightBooking() {
               {/* <p>Add guests</p> */}
               <aside className="flex">
                 <MinusSquare color="#2654E4" onClick={minusNum} />
-                <div>0</div>
+                <div>{passengerValue}</div>
                 <AddSquare color="#2654E4" onClick={addNum} />
               </aside>
             </div>

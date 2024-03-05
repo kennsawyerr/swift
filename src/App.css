@@ -176,8 +176,8 @@ main {
 
 .flight-location {
   display: flex;
-  align-items: flex-start;
-  gap: 30px;
+  align-items: center;
+
   color: black;
 }
 .flight-location li {
