@@ -1,0 +1,158 @@
+[
+    {
+      "flight_number": "AA101",
+      "airline": "American Airlines",
+      "departure_airport": "JFK",
+      "arrival_airport": "LHR",
+      "departure_time": "2024-01-25T08:00:00",
+      "arrival_time": "2024-01-25T19:00:00",
+      "price": 500,
+      "destination_country": "United Kingdom"
+    },
+    {
+      "flight_number": "BA202",
+      "airline": "British Airways",
+      "departure_airport": "LAX",
+      "arrival_airport": "CDG",
+      "departure_time": "2024-01-26T10:00:00",
+      "arrival_time": "2024-01-26T18:00:00",
+      "price": 600,
+      "destination_country": "France"
+    },
+    {
+      "flight_number": "DL303",
+      "airline": "Delta Air Lines",
+      "departure_airport": "ORD",
+      "arrival_airport": "SYD",
+      "departure_time": "2024-01-27T09:00:00",
+      "arrival_time": "2024-01-28T16:00:00",
+      "price": 1200,
+      "destination_country": "Australia"
+    },
+    {
+      "flight_number": "UA404",
+      "airline": "United Airlines",
+      "departure_airport": "SFO",
+      "arrival_airport": "NRT",
+      "departure_time": "2024-01-28T12:00:00",
+      "arrival_time": "2024-01-29T15:00:00",
+      "price": 800,
+      "destination_country": "Japan"
+    },
+    {
+      "flight_number": "LH505",
+      "airline": "Lufthansa",
+      "departure_airport": "FRA",
+      "arrival_airport": "SIN",
+      "departure_time": "2024-01-29T11:00:00",
+      "arrival_time": "2024-01-30T20:00:00",
+      "price": 900,
+      "destination_country": "Singapore"
+    },
+    {
+      "flight_number": "AF606",
+      "airline": "Air France",
+      "departure_airport": "CDG",
+      "arrival_airport": "JNB",
+      "departure_time": "2024-01-30T13:00:00",
+      "arrival_time": "2024-01-31T22:00:00",
+      "price": 1100,
+      "destination_country": "South Africa"
+    },
+    {
+      "flight_number": "EK707",
+      "airline": "Emirates",
+      "departure_airport": "DXB",
+      "arrival_airport": "JFK",
+      "departure_time": "2024-01-31T14:00:00",
+      "arrival_time": "2024-02-01T21:00:00",
+      "price": 1000,
+      "destination_country": "United States"
+    },
+    {
+      "flight_number": "TK808",
+      "airline": "Turkish Airlines",
+      "departure_airport": "IST",
+      "arrival_airport": "BKK",
+      "departure_time": "2024-02-01T15:00:00",
+      "arrival_time": "2024-02-02T18:00:00",
+      "price": 850,
+      "destination_country": "Thailand"
+    },
+    {
+      "flight_number": "QF909",
+      "airline": "Qantas",
+      "departure_airport": "SYD",
+      "arrival_airport": "LAX",
+      "departure_time": "2024-02-02T16:00:00",
+      "arrival_time": "2024-02-02T22:00:00",
+      "price": 950,
+      "destination_country": "United States"
+    },
+    {
+      "flight_number": "CX1010",
+      "airline": "Cathay Pacific",
+      "departure_airport": "HKG",
+      "arrival_airport": "LHR",
+      "departure_time": "2024-02-03T17:00:00",
+      "arrival_time": "2024-02-04T08:00:00",
+      "price": 700,
+      "destination_country": "United Kingdom"
+    },
+    {
+      "flight_number": "SQ1111",
+      "airline": "Singapore Airlines",
+      "departure_airport": "SIN",
+      "arrival_airport": "JFK",
+      "departure_time": "2024-02-04T18:00:00",
+      "arrival_time": "2024-02-05T21:00:00",
+      "price": 1100,
+      "destination_country": "United States"
+    },
+    {
+      "flight_number": "EY1212",
+      "airline": "Etihad Airways",
+      "departure_airport": "AUH",
+      "arrival_airport": "LAX",
+      "departure_time": "2024-02-05T19:00:00",
+      "arrival_time": "2024-02-06T23:00:00",
+      "price": 1050,
+      "destination_country": "United States"
+    },
+    {
+      "flight_number": "KL1313",
+      "airline": "KLM",
+      "departure_airport": "AMS",
+      "arrival_airport": "HKG",
+      "departure_time": "2024-02-06T20:00:00",
+      "arrival_time": "2024-02-07T12:00:00",
+      "price": 800,
+      "destination_country": "Hong Kong"
+    },
+    {
+      "flight_number": "QF1414",
+      "airline": "Qantas",
+      "departure_airport": "MEL",
+      "arrival_airport": "JFK",
+      "departure_time": "2024-02-07T21:00:00",
+      "arrival_time": "2024-02-08T18:00:00",
+      "price": 1200,
+      "destination_country": "United States"
+    },
+    {
+      "flight_number": "UA1515",
+      "airline": "United Airlines",
+      "departure_airport": "ORD",
+      "arrival_airport": "LHR",
+      "departure_time": "2024-02-08T22:00:00",
+      "arrival_time": "2024-02-09T10:00:00",
+      "price": 700,
+      "destination_country": "United Kingdom"
+    },
+    {
+      "flight_number": "EK1616",
+      "airline": "Emirates",
+      "departure_airport": "DXB",
+      "arrival_airport": "SFO",
+      "departure_time": "2024-02-09T23:"
+    }  ]
