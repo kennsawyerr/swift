@@ -769,16 +769,28 @@ aside {
   .nav__menu {
     display: block;
     align-self: flex-start;
-    padding: 10px 0 0px;
-    margin: auto 20px;
+    padding: 50px 0 50px;
+    /* margin: auto 20px; */
     backdrop-filter: blur(100px);
-    background-color: red;
+    background-color: var(--Grey-75);
+    color: black;
     width: 100%;
+    position: absolute;
+  }
+
+  .menu-btn {
+    z-index: 99;
   }
   .flex {
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+
+  nav li {
+    padding: 0 20px;
+    font-size: 20px;
+    margin: 6px auto;
   }
 }
 
