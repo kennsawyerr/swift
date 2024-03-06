@@ -32,7 +32,7 @@ function Home() {
       <div className="container">
         <div className="main-navbar flex">
           <div>
-            <div className="logo-header">Swift</div>
+            <div className="logo-header">Sterling</div>
             <div className="logo-header_sub">FLIGHT BOOKING AGENCY</div>
           </div>
 
@@ -381,7 +381,7 @@ function Home() {
             <hr />
             <div className="flex footer-last-elem">
               <div>
-                <div className="logo-header white">swift</div>
+                <div className="logo-header white">Sterling</div>
                 <div className="logo-header_sub white">
                   FLIGHT BOOKING AGENCY
                 </div>
