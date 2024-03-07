@@ -23,8 +23,6 @@ import discountIcon from "./assets/discount.png";
 import FlightLevels from "./flightlevels";
 import "./App.css";
 
-// api url here
-
 function Home() {
   return (
     <>
