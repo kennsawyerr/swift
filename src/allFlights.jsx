@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import flightDataFile from "./flightdata.json";
-const allFlights = () => {
+const AllFlights = () => {
   //[] means initialised with an empty array
+  
   const [displayFlights, setDisplayFlights] = useState([]);
 
   useEffect(() => {
     FetchFlights();
   }, []);
-
+//  if(e.key==="Enter"){};
   const FetchFlights = async () => {
     try {
       const response = await fetch(flightDataFile);
@@ -26,7 +27,7 @@ const allFlights = () => {
   );
 };
 
-export default allFlights;
+export default AllFlights;
 
 // import { useState, useEffect } from "react";
 
