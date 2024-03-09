@@ -11,6 +11,7 @@ import AllFlights from "./allFlights";
 import Seats from "./Seats";
 import Appetizers from "./Appetizers";
 import Ammenities from "./Ammenities";
+import Restaurant from "./Restaurant";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/seats" element={<Seats />} />
             <Route path="/appetizers" element={<Appetizers />} />
             <Route path="/ammenities" element={<Ammenities />} />
+            <Route path="/restaurant" element={<Restaurant />} />
           </Routes>
         </Router>
       </div>
