@@ -8,7 +8,8 @@ const AllFlights = () => {
   useEffect(() => {
     FetchFlights();
   }, []);
-//  if(e.key==="Enter"){};
+//  if(e.key==="Enter"){};If (e.keyvalue===”Enter”) {}- first add eventlistener to the button 
+
   const FetchFlights = async () => {
     try {
       const response = await fetch(flightDataFile);
