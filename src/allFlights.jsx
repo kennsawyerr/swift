@@ -22,8 +22,10 @@ const AllFlights = () => {
 
   return (
     <>
+    <div className="container">
       <h2>All flights go here</h2>
       <div>{displayFlights}</div>
+      </div>
     </>
   );
 };
