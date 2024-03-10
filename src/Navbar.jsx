@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import menuImg from "./assets/menu.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [collapse, setCollapse] = useState(false);
@@ -21,6 +23,12 @@ function Navbar() {
 
             <li className="margin-l">Sign up</li>
             <li className="">Sign in</li>
+
+            <li>
+              <NavLink to="/flights" >
+                Flights
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>
