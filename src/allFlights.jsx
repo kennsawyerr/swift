@@ -23,17 +23,27 @@ const AllFlights = () => {
   return (
     <>
       <div className="container">
-      
         <div>
           {displayFlights.map((item) => (
-            <article key={item.id}>
-              <img src={item.img} alt={item.rrival_airport} />
+            <article key={item.id} className="flex">
+              {/* <img src={item.img} alt={item.arrival_airport} />
               <header>
-                <h4>Location: {item.destination_country}</h4>
+                <h4>Takeoff: {item.destination_country}</h4>
+                <h4>Dest: {item.destination_country}</h4>
                 <h4>Airline: {item.airline}</h4>
                 <h3>Price : {item.price}</h3>
                 <h3>Passengers : {item.passengers}</h3>
-              </header>
+              </header> */}
+
+              <div>{item.airline}</div>
+              <div>
+                <div>{item.departure_time}</div>
+                <div>{item.departure_location}</div>
+              </div>
+              <div>
+                <div>{item.arrival_time}</div>
+                <div>{item.destination_country}</div>
+              </div>
             </article>
           ))}
         </div>
