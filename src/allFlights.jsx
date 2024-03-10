@@ -2,29 +2,41 @@ import { useEffect, useState } from "react";
 import flightDataFile from "./flightdata.json";
 const AllFlights = () => {
   //[] means initialised with an empty array
-  
+
   const [displayFlights, setDisplayFlights] = useState([]);
 
   useEffect(() => {
-    FetchFlights();
+    setDisplayFlights(flightDataFile);
   }, []);
-//  if(e.key==="Enter"){};If (e.keyvalue===”Enter”) {}- first add eventlistener to the button 
+  //  if(e.key==="Enter"){};If (e.keyvalue===”Enter”) {}- first add eventlistener to the button
 
-  const FetchFlights = async () => {
-    try {
-      const response = await fetch(flightDataFile);
-      const data = await response.json();
-      setDisplayFlights(data);
-    } catch (error) {
-      console.log("Error fetching data: ", error);
-    }
-  };
+  // const FetchFlights = async () => {
+  //   try {
+  //     const response = await fetch(flightDataFile);
+  //     const data = await response.json();
+  //     setDisplayFlights(data);
+  //   } catch (error) {
+  //     console.log("Error fetching data: ", error);
+  //   }
+  // };
 
   return (
     <>
-    <div className="container">
-      <h2>All flights go here</h2>
-      <div>{displayFlights}</div>
+      <div className="container">
+      
+        <div>
+          {displayFlights.map((item) => (
+            <article key={item.id}>
+              <img src={item.img} alt={item.rrival_airport} />
+              <header>
+                <h4>Location: {item.destination_country}</h4>
+                <h4>Airline: {item.airline}</h4>
+                <h3>Price : {item.price}</h3>
+                <h3>Passengers : {item.passengers}</h3>
+              </header>
+            </article>
+          ))}
+        </div>
       </div>
     </>
   );

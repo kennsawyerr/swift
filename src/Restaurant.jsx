@@ -9,11 +9,15 @@ const Menu = () => {
   }, []);
 
   const filterMenu = (category) => {
-    if (category === "all") {
+    if (category === "all") 
+    //if (location === "all") 
+    {
       setFilteredMenu(menuData);
     } else {
       const filtered = menuData.filter((item) => item.category === category);
+      //const filtered = flightsData.filter((item)=> item.location ===location);
       setFilteredMenu(filtered);
+      //setFlightsLocation(flightsData)
     }
   };
 
