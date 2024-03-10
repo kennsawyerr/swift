@@ -8,34 +8,30 @@ const AllFlights = () => {
   useEffect(() => {
     setDisplayFlights(flightDataFile);
   }, []);
-  //  if(e.key==="Enter"){};If (e.keyvalue===”Enter”) {}- first add eventlistener to the button
+  //  if(e.key==="Enter"){};If (e.keyvalue===”Enter”) {}- first add eventlistener to the button-for search features
 
-  // const FetchFlights = async () => {
-  //   try {
-  //     const response = await fetch(flightDataFile);
-  //     const data = await response.json();
-  //     setDisplayFlights(data);
-  //   } catch (error) {
-  //     console.log("Error fetching data: ", error);
-  //   }
-  // };
+  const filterFlights = (locationDestination) => {
+    if (locationDestination === "all") {
+      setDisplayFlights(flightDataFile);
+    } else {
+      const alreadyfilteredFlights = flightDataFile.filter(
+        (item) => item.departure_location === locationDestination
+      );
+      setDisplayFlights(alreadyfilteredFlights);
+    }
+  };
 
   return (
     <>
       <div className="container">
         <div>
+          <div>
+            <button onClick={() => filterFlights("Nigeria")}>Nigeria</button>
+            <button onClick={() => filterFlights("Togo")}>Togo</button>
+          </div>
           {displayFlights.map((item) => (
-            <article key={item.id} className="flex">
-              {/* <img src={item.img} alt={item.arrival_airport} />
-              <header>
-                <h4>Takeoff: {item.destination_country}</h4>
-                <h4>Dest: {item.destination_country}</h4>
-                <h4>Airline: {item.airline}</h4>
-                <h3>Price : {item.price}</h3>
-                <h3>Passengers : {item.passengers}</h3>
-              </header> */}
-
-              <div>{item.airline}</div>
+            <article key={item.id} className="flex tickets">
+              <div className="col-bl">{item.airline}</div>
               <div>
                 <div>{item.departure_time}</div>
                 <div>{item.departure_location}</div>

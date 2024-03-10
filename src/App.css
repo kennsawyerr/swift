@@ -40,6 +40,9 @@ nav {
 .blue {
   background-color: #2654e4;
 }
+.col-bl {
+  color: #2654e4;
+}
 .brown {
   background-color: #e7793c;
 }
@@ -94,6 +97,13 @@ main {
   color: #2654e4;
   font-weight: 400;
   line-height: normal;
+}
+
+.tickets {
+  border: 1px solid black;
+  margin: 20px 8px;
+  padding: 20px;
+  width: 400px;
 }
 
 .logo-header_sub {

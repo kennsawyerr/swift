@@ -8,27 +8,27 @@ const Menu = () => {
     setFilteredMenu(menuData); // Initialize filteredMenu state with menuData on component mount
   }, []);
 
-  const filterMenu = (category) => {
-    if (category === "all") 
-    //if (location === "all") 
-    {
-      setFilteredMenu(menuData);
-    } else {
-      const filtered = menuData.filter((item) => item.category === category);
-      //const filtered = flightsData.filter((item)=> item.location ===location);
-      setFilteredMenu(filtered);
-      //setFlightsLocation(flightsData)
-    }
-  };
+  //   const filterMenu = (category) => {
+  //     if (category === "all")
+  //     //if (location === "all")
+  //     {
+  //       setFilteredMenu(menuData);
+  //     } else {
+  //       const filtered = menuData.filter((item) => item.category === category);
+  //       //const filtered = flightsData.filter((item)=> item.location ===location);
+  //       setFilteredMenu(filtered);
+  //       //setFlightsLocation(flightsData)
+  //     }
+  //   };
 
   return (
     <div>
-      <div className="filters">
+      {/* <div className="filters">
         <button onClick={() => filterMenu("all")}>All</button>
         <button onClick={() => filterMenu("breakfast")}>Breakfast</button>
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("shakes")}>Shakes</button>
-      </div>
+      </div> */}
       <div className="menu">
         {filteredMenu.map((item) => (
           <article key={item.id} className="menu-item">
