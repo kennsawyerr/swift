@@ -29,19 +29,21 @@ const AllFlights = () => {
             <button onClick={() => filterFlights("Nigeria")}>Nigeria</button>
             <button onClick={() => filterFlights("Togo")}>Togo</button>
           </div>
-          {displayFlights.map((item) => (
-            <article key={item.id} className="flex tickets">
-              <div className="col-bl">{item.airline}</div>
-              <div>
-                <div>{item.departure_time}</div>
-                <div>{item.departure_location}</div>
-              </div>
-              <div>
-                <div>{item.arrival_time}</div>
-                <div>{item.destination_country}</div>
-              </div>
-            </article>
-          ))}
+          <div className="grid2">
+            {displayFlights.map((item) => (
+              <article key={item.id} className="flex tickets">
+                <div className="col-bl">{item.airline}</div>
+                <div>
+                  <div>{item.departure_time}</div>
+                  <div>{item.departure_location}</div>
+                </div>
+                <div>
+                  <div>{item.arrival_time}</div>
+                  <div>{item.destination_country}</div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </>

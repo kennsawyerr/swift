@@ -99,13 +99,6 @@ main {
   line-height: normal;
 }
 
-.tickets {
-  border: 1px solid black;
-  margin: 20px 8px;
-  padding: 20px;
-  width: 400px;
-}
-
 .logo-header_sub {
   color: #000;
   font-family: "Inter";
@@ -615,6 +608,20 @@ article .biggerImg {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
   gap: 40px; /* Adjust the gap between grid items */
+}
+
+.grid2 {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); Two columns with equal width */
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 40px; /* Adjust the gap between grid items */
+}
+
+.tickets {
+  border: 1px solid black;
+  margin: 20px 8px;
+  padding: 20px;
+  width: 100%;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
