@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import flightDataFile from "./flightdata.json";
+import { useLocation } from "react-router-dom";
 const AllFlights = () => {
   //[] means initialised with an empty array
+
+  const {state} = useLocation();
+  const {formData} = state;
 
   const [displayFlights, setDisplayFlights] = useState([]);
 
@@ -23,6 +27,11 @@ const AllFlights = () => {
 
   return (
     <>
+    
+   
+
+
+
       <div className="container">
         <div>
           <div>
@@ -45,6 +54,14 @@ const AllFlights = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+      <h1>Search Results</h1>
+      <p>Travelers: {formData.travelers}</p>
+      <p>Location: {formData.location}</p>
+      <p>Check-in Date: {formData.checkInDate}</p>
+      <p>Check-out Date: {formData.checkOutDate}</p>
+       Display other search results 
       </div>
     </>
   );
