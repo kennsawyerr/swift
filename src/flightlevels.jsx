@@ -107,9 +107,9 @@ function FlightBooking() {
             <div>
               <img src={userIcon} alt="" />
             </div>
-            <div className="">
+            <div className="travellers-textbx">
               <h3>Travellers</h3>
-              {/* <p>Add guests</p> */}
+
               <aside className="">
                 <MinusSquare color="#2654E4" onClick={minusNum} />
                 <div>{passengerValue} </div>

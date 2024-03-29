@@ -323,7 +323,6 @@ function Home() {
 
             <button>Shoot us a DM</button>
 
-            <hr />
             <div className="flex footer-last-elem">
               <div>
                 <div className="logo-header white">Sterling</div>

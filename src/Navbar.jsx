@@ -14,9 +14,9 @@ function Navbar() {
       {/* {<ul className=" gap-20 flex ">} */}
       <nav>
         <div className=" flex">
-          <div className="navigation">
+          <div className=" container navigation">
             <div className="menu-btn">
-              <img src={menuImg} onClick={toggleNavbar} alt="" />
+              <img src={menuImg} className="" onClick={toggleNavbar} alt="" />
             </div>
 
             <div className="show">
@@ -42,8 +42,6 @@ function Navbar() {
           </ul>
         </div>
       </nav>
-
-      <div className="container"></div>
     </>
   );
 }
