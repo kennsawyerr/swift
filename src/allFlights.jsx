@@ -51,6 +51,10 @@ travelDestination
         <ul className="flex flight-location">
           <li>{location.state.travelDestination}</li>
         </ul>
+
+        <div>
+          <button>Take Flight?</button>
+        </div>
       </div>
 
       <div className="container">
