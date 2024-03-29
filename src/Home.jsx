@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
       <div className="container">
-        <div className="main-navbar hide flex">
+        <div className="main-navbar  flex">
           <div className="hide">
             <div className="logo-header ">Sterling</div>
             <div className="logo-header_sub ">FLIGHT BOOKING AGENCY</div>

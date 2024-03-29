@@ -20,12 +20,12 @@ function Navbar() {
             </div>
 
             <div className="show">
-              <div className="logo-header">Sterling</div>
-              <div className="logo-header_sub">FLIGHT BOOKING AGENCY</div>
+              <div className="logo-header-mini">Sterling</div>
+              <div className="logo-header_sub-mini">FLIGHT BOOKING AGENCY</div>
             </div>
           </div>
           <ul className={`nav__menu ${collapse ? "collapse-nav" : ""}`}>
-            <li className="">Support</li>
+            <li className="margin-l">Support</li>
             <li className=""> Languages</li>
 
             <li className="margin-l">Sign up</li>

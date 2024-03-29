@@ -59,6 +59,7 @@ ul {
   font-family: "Inter";
   font-size: 16px;
   width: 30%;
+  z-index: 99;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -96,6 +97,27 @@ main {
   font-style: normal;
   color: #2654e4;
   font-weight: 400;
+  line-height: normal;
+}
+
+.logo-header-mini {
+  color: #000;
+
+  /* font-family: "Ojuju"; */
+  font-family: "Satisfy", cursive;
+  font-size: 29px;
+  font-style: normal;
+  color: #2654e4;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logo-header_sub-mini {
+  color: #000;
+  font-family: "Inter";
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 600;
   line-height: normal;
 }
 
@@ -717,7 +739,7 @@ article .biggerImg {
 .nav__menu {
   display: flex;
   justify-content: space-evenly;
-  border: 2px solid green;
+
   width: 100%;
 }
 
@@ -781,9 +803,12 @@ aside {
 
   .navigation {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
   }
 
   .hide {
@@ -922,9 +947,12 @@ aside {
 
   .navigation {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
   }
   .hide {
     display: none;
