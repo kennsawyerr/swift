@@ -5,10 +5,7 @@ const AllFlights = () => {
   //[] means initialised with an empty array
 
   const location = useLocation();
-  console.log(location)
-
-
-
+  console.log(location);
 
   const [displayFlights, setDisplayFlights] = useState([]);
 
@@ -30,13 +27,12 @@ const AllFlights = () => {
 
   return (
     <>
-        <div>
+      {/* <div>
       <h1>Search Results</h1>
       <p>Travelers: {location.state.passengerValue}</p>
       <p>Location: {location.state.travelDestination}</p>
       {/* <p>Check-in Date: {location.state.departureDate}</p> */}
       {/* <p>Check-out Date: {location.state.returningDate}</p> */}
-      
 
       {/* departureDate
 : 
@@ -50,10 +46,12 @@ Sat Apr 06 2024 00:00:00 GMT+0100 (West Africa Standard Time) {}
 travelDestination
 : 
 "Abuja" */}
-      </div> 
-   
 
-
+      <div className="logistics-table">
+        <ul className="flex flight-location">
+          <li>{location.state.travelDestination}</li>
+        </ul>
+      </div>
 
       <div className="container">
         <div>
@@ -78,7 +76,6 @@ travelDestination
           </div>
         </div>
       </div>
-   
     </>
   );
 };

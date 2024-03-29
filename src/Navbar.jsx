@@ -20,13 +20,15 @@ function Navbar() {
             </div>
 
             <div className="show">
-              <div className="logo-header-mini">Sterling</div>
+              <div className="logo-header-mini">
+                <NavLink to="/">Sterling</NavLink>
+              </div>
               <div className="logo-header_sub-mini">FLIGHT BOOKING AGENCY</div>
             </div>
           </div>
           <ul className={`nav__menu ${collapse ? "collapse-nav" : ""}`}>
-            <li className="margin-l">Support</li>
-            <li className=""> Languages</li>
+            <li className="marginal">Support</li>
+            <li className="marginal-right"> Languages</li>
 
             <li className="margin-l">Sign up</li>
             <li className="">Sign in</li>
@@ -34,7 +36,9 @@ function Navbar() {
             <li>
               <NavLink to="/flights">Flights</NavLink>
             </li>
-            <li className="show">Home</li>
+            <li className="show">
+              <NavLink to="/">Home</NavLink>
+            </li>
             <li className="show">About</li>
             <li className="show">Offers</li>
             <li className="show">Seats</li>

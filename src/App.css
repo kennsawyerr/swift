@@ -178,8 +178,10 @@ main {
 .flight-class-levels {
   display: flex;
   padding: 12px;
-  align-items: flex-start;
+  align-items: center;
   /* gap: 38px; */
+  width: 100%;
+  min-width: 200px;
   background-color: #f5f5f5;
   border-radius: 200px;
 }
@@ -889,6 +891,13 @@ aside {
     display: none;
   }
 
+  .marginal {
+    margin-left: auto;
+  }
+  .marginal-right {
+    margin-right: auto;
+  }
+
   .menu-btn {
     display: block;
     width: 29px;
@@ -919,9 +928,15 @@ aside {
   }
 
   nav li {
-    padding: 0 20px;
+    padding: 7px 20px;
     font-size: 20px;
     margin: 6px auto;
+    font-weight: lighter;
+    color: inherit;
+  }
+
+  nav li:hover {
+    color: #2654e4;
   }
   .newsletter h1 {
     font-size: 19px;
@@ -944,6 +959,13 @@ aside {
     max-width: 800px;
     overflow: hidden;
     margin: 0 auto;
+  }
+
+  .nav li {
+    padding: 7px 20px;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 6px auto;
   }
 
   aside {
@@ -1045,7 +1067,7 @@ aside {
   }
   .flight-location li {
     padding: 2px;
-    width: 60%;
+    width: 49%;
     margin: 10px auto 0;
   }
   .travellers-textbx {

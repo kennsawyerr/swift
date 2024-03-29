@@ -24,6 +24,20 @@ function FlightBooking() {
     setShowSeats(false);
   };
 
+  const handleDataTransfer = () => {
+    () => {
+      if (passengerValue.valueOf)
+        navigate("/flights", {
+          replace: true,
+          state: {
+            passengerValue,
+            returningDate,
+            departureDate,
+            travelDestination,
+          },
+        });
+    };
+  };
   const business = () => {
     setShowAppetizers(true);
     setShowAmenities(true);
@@ -153,20 +167,7 @@ function FlightBooking() {
             </div>
           </li>
           <li>
-            <button
-              className="search-cont"
-              onClick={() => {
-                navigate("/flights", {
-                  replace: true,
-                  state: {
-                    passengerValue,
-                    returningDate,
-                    departureDate,
-                    travelDestination,
-                  },
-                });
-              }}
-            >
+            <button className="search-cont" onClick={handleDataTransfer}>
               <img src={search} className="hide" alt="" />
               <div className="show white ">Search flights</div>
             </button>
