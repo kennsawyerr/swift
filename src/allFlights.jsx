@@ -4,8 +4,11 @@ import { useLocation } from "react-router-dom";
 const AllFlights = () => {
   //[] means initialised with an empty array
 
-  const {state} = useLocation();
-  const {formData} = state;
+  const location = useLocation();
+  console.log(location)
+
+
+
 
   const [displayFlights, setDisplayFlights] = useState([]);
 
@@ -27,7 +30,27 @@ const AllFlights = () => {
 
   return (
     <>
-    
+        <div>
+      <h1>Search Results</h1>
+      <p>Travelers: {location.state.passengerValue}</p>
+      <p>Location: {location.state.travelDestination}</p>
+      {/* <p>Check-in Date: {location.state.departureDate}</p> */}
+      {/* <p>Check-out Date: {location.state.returningDate}</p> */}
+      
+
+      {/* departureDate
+: 
+Fri Mar 29 2024 00:00:00 GMT+0100 (West Africa Standard Time) {}
+passengerValue
+: 
+"1"
+returningDate
+: 
+Sat Apr 06 2024 00:00:00 GMT+0100 (West Africa Standard Time) {}
+travelDestination
+: 
+"Abuja" */}
+      </div> 
    
 
 
@@ -55,14 +78,7 @@ const AllFlights = () => {
           </div>
         </div>
       </div>
-      <div>
-      <h1>Search Results</h1>
-      <p>Travelers: {formData.travelers}</p>
-      <p>Location: {formData.location}</p>
-      <p>Check-in Date: {formData.checkInDate}</p>
-      <p>Check-out Date: {formData.checkOutDate}</p>
-       Display other search results 
-      </div>
+   
     </>
   );
 };

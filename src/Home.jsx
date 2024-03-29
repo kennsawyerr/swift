@@ -26,15 +26,14 @@ import "./App.css";
 function Home() {
   return (
     <>
-      <FlightLevels />
       <div className="container">
-        <div className="main-navbar flex">
-          <div>
-            <div className="logo-header">Sterling</div>
-            <div className="logo-header_sub">FLIGHT BOOKING AGENCY</div>
+        <div className="main-navbar hide flex">
+          <div className="hide">
+            <div className="logo-header ">Sterling</div>
+            <div className="logo-header_sub ">FLIGHT BOOKING AGENCY</div>
           </div>
 
-          <ul className="navMenu">
+          <ul className="navMenu hide">
             <li>Home</li>
             <li>About</li>
             <li>Offers</li>
@@ -42,7 +41,7 @@ function Home() {
             <li>Destination</li>
           </ul>
 
-          <button className="contact-btn"> Contact</button>
+          <button className=" hide contact-btn"> Contact</button>
         </div>
       </div>
       <main>
@@ -57,6 +56,7 @@ function Home() {
             <img src={plane} className="plane" alt="an airplane in the sky" />
           </div>
 
+          <FlightLevels />
           <section className="logistics-table">
             <ul className="flex flight-class-levels">
               <li>Economy</li>

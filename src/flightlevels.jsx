@@ -16,6 +16,7 @@ function FlightBooking() {
   const [departureDate, setDepartureDate] = useState(null);
   const [returningDate, setReturningDate] = useState(null);
   const [passengerValue, setPassengerValue] = useState(false);
+  const[travelDestination, setTravelDestination] = useState('')
 
   const economy = () => {
     setShowAppetizers(false);
@@ -49,10 +50,11 @@ function FlightBooking() {
   
   const handleDatePickerChange = (date) => {
     setReturningDate(date);
-    handleChange(date); // Call handleChange here
+
   };
 
     const navigate = useNavigate();
+   // eslint-disable-next-line no-unused-vars
    const [formData, setFormData] = useState({
         travelers: '' ,
         location: '',
@@ -61,22 +63,23 @@ function FlightBooking() {
       });
  
 
-  const handleChange = (e) => {
-    const { name, value ,id } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value, id
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value ,id } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value, id
+  //   }));
+  // };
 
-  const handleSearch = () => {
-    
-    // history.push({
-    //   pathname: '/allFlights.jsx',
-    //   state: { formData },
-    // });
-    navigate('./allFlights.jsx', { state: { formData } });
-  };
+  // const handleSearch = () => {
+  
+  //   navigate('./allFlights.jsx', { state: { formData } });
+  // };
+
+
+  
+  
+
 
   return (
     <>
@@ -97,7 +100,8 @@ function FlightBooking() {
             <div>
               <h3>Location</h3>
               <p>Where are you going?</p>
-              <input type="text" name="" id="" placeholder="location" />
+              <input type="text" name="" id="" placeholder="location" 
+                onChange={(event) => {setTravelDestination(event.target.value)}} />
             </div>
           </li>
 
@@ -115,6 +119,8 @@ function FlightBooking() {
               </aside>
             </div>
           </li>
+
+          {/*  <input type="text" name="username" placeholder="username" onChange={(event) => {setName(event.target.value)}} /> */}
 
           <li>
             <div>
@@ -150,9 +156,9 @@ function FlightBooking() {
             </div>
           </li>
           <li>
-            <div className="search-cont" onClick={handleSearch}>
+            <button className="search-cont" onClick={() => {navigate('/flights', {replace: true, state: {passengerValue, returningDate,departureDate ,travelDestination}})}}>
               <img src={search} className="" alt="" />
-            </div>
+            </button>
           </li>
         </ul>
 
