@@ -57,59 +57,6 @@ function Home() {
           </div>
 
           <FlightLevels />
-          <section className="logistics-table">
-            <ul className="flex flight-class-levels">
-              <li>Economy</li>
-              <li className="selected blue">Business Class</li>
-              <li>First Class</li>
-            </ul>
-            <ul className="flex flight-location">
-              <li>
-                <div>
-                  <img src={menuImg} />
-                </div>
-                <div>
-                  <h3>Location</h3>
-                  <p>Where are you going?</p>
-                </div>
-              </li>
-
-              <li>
-                <div>
-                  <img src={userIcon} alt="" />
-                </div>
-                <div>
-                  <h3>Travellers</h3>
-                  <p>Add guests</p>
-                </div>
-              </li>
-
-              <li>
-                <div>
-                  <img src={menuImg} alt="" />
-                </div>
-                <div>
-                  <h3>Check in</h3>
-                  <p>Add dates</p>
-                </div>
-              </li>
-
-              <li>
-                <div>
-                  <img src={menuImg} alt="" />
-                </div>
-                <div>
-                  <h3>Check out</h3>
-                  <p>Add dates</p>
-                </div>
-              </li>
-              <li>
-                <div className="search-cont">
-                  <img src={search} className="" alt="" />
-                </div>
-              </li>
-            </ul>
-          </section>
 
           <section className="travel-supp">
             <div className="travel-text-cont">

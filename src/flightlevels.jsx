@@ -3,7 +3,7 @@ import search from "./assets/search.png";
 import userIcon from "./assets/user.png";
 import calendar from "./assets/calendar.png";
 import locationIcon from "./assets/location-marker-icon.png";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { AddSquare, MinusSquare } from "iconsax-react";
 import ReactDatePicker from "react-datepicker";
@@ -16,7 +16,7 @@ function FlightBooking() {
   const [departureDate, setDepartureDate] = useState(null);
   const [returningDate, setReturningDate] = useState(null);
   const [passengerValue, setPassengerValue] = useState(false);
-  const[travelDestination, setTravelDestination] = useState('')
+  const [travelDestination, setTravelDestination] = useState("");
 
   const economy = () => {
     setShowAppetizers(false);
@@ -36,8 +36,6 @@ function FlightBooking() {
     setShowSeats(true);
   };
 
-  
-
   const addNum = () => {
     setPassengerValue((prevCount) => prevCount + 1);
   };
@@ -45,23 +43,21 @@ function FlightBooking() {
   const minusNum = () => {
     if (passengerValue > 1) {
       setPassengerValue((prevCount) => prevCount - 1);
-    } };
-
-  
-  const handleDatePickerChange = (date) => {
-    setReturningDate(date);
-
+    }
   };
 
-    const navigate = useNavigate();
-   // eslint-disable-next-line no-unused-vars
-   const [formData, setFormData] = useState({
-        travelers: '' ,
-        location: '',
-        checkInDate: '',
-        checkOutDate: '',
-      });
- 
+  const handleDatePickerChange = (date) => {
+    setReturningDate(date);
+  };
+
+  const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
+  const [formData, setFormData] = useState({
+    travelers: "",
+    location: "",
+    checkInDate: "",
+    checkOutDate: "",
+  });
 
   // const handleChange = (e) => {
   //   const { name, value ,id } = e.target;
@@ -72,14 +68,9 @@ function FlightBooking() {
   // };
 
   // const handleSearch = () => {
-  
+
   //   navigate('./allFlights.jsx', { state: { formData } });
   // };
-
-
-  
-  
-
 
   return (
     <>
@@ -100,8 +91,15 @@ function FlightBooking() {
             <div>
               <h3>Location</h3>
               <p>Where are you going?</p>
-              <input type="text" name="" id="" placeholder="location" 
-                onChange={(event) => {setTravelDestination(event.target.value)}} />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="location"
+                onChange={(event) => {
+                  setTravelDestination(event.target.value);
+                }}
+              />
             </div>
           </li>
 
@@ -112,9 +110,9 @@ function FlightBooking() {
             <div className="">
               <h3>Travellers</h3>
               {/* <p>Add guests</p> */}
-              <aside className="flex">
+              <aside className="">
                 <MinusSquare color="#2654E4" onClick={minusNum} />
-                <div >{passengerValue} </div>
+                <div>{passengerValue} </div>
                 <AddSquare color="#2654E4" onClick={addNum} />
               </aside>
             </div>
@@ -135,9 +133,8 @@ function FlightBooking() {
                 dateFormat="MM/dd/yyyy"
                 placeholderText="Select a date"
               />
-        
             </div>
-          </li> 
+          </li>
 
           <li>
             <div>
@@ -156,8 +153,22 @@ function FlightBooking() {
             </div>
           </li>
           <li>
-            <button className="search-cont" onClick={() => {navigate('/flights', {replace: true, state: {passengerValue, returningDate,departureDate ,travelDestination}})}}>
-              <img src={search} className="" alt="" />
+            <button
+              className="search-cont"
+              onClick={() => {
+                navigate("/flights", {
+                  replace: true,
+                  state: {
+                    passengerValue,
+                    returningDate,
+                    departureDate,
+                    travelDestination,
+                  },
+                });
+              }}
+            >
+              <img src={search} className="hide" alt="" />
+              <div className="show white ">Search flights</div>
             </button>
           </li>
         </ul>
@@ -186,109 +197,3 @@ function FlightBooking() {
 }
 
 export default FlightBooking;
-
-
-
-// import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
-
-// const SearchForm = () => {
-//   const history = useHistory();
-//   const [formData, setFormData] = useState({
-//     travelers: '',
-//     location: '',
-//     checkInDate: '',
-//     checkOutDate: '',
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prevData) => ({
-//       ...prevData,
-//       [name]: value,
-//     }));
-//   };
-
-//   const handleSearch = () => {
-//     // Navigate to another page with form data as parameters
-//     history.push({
-//       pathname: '/search-results',
-//       state: { formData },
-//     });
-//   };
-
-//   return (
-//     <div>
-//       <input
-//         type="number"
-//         name="travelers"
-//         value={formData.travelers}
-//         onChange={handleChange}
-//         placeholder="Number of travelers"
-//       />
-//       <input
-//         type="text"
-//         name="location"
-//         value={formData.location}
-//         onChange={handleChange}
-//         placeholder="Location"
-//       />
-//       <input
-//         type="date"
-//         name="checkInDate"
-//         value={formData.checkInDate}
-//         onChange={handleChange}
-//         placeholder="Check-in Date"
-//       />
-//       <input
-//         type="date"
-//         name="checkOutDate"
-//         value={formData.checkOutDate}
-//         onChange={handleChange}
-//         placeholder="Check-out Date"
-//       />
-//       <button onClick={handleSearch}>Search</button>
-//     </div>
-//   );
-// };
-
-// export default SearchForm;
-
-
-//where the form should appear
-/* 
-
-
-
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-
-const SearchResults = () => {
-  const { state } = useLocation();
-  const { formData } = state;
-
-  // Use formData values in this component
-
-  return (
-    <div>
-      <h1>Search Results</h1>
-      <p>Travelers: {formData.travelers}</p>
-      <p>Location: {formData.location}</p>
-      <p>Check-in Date: {formData.checkInDate}</p>
-      <p>Check-out Date: {formData.checkOutDate}</p>
-       Display other search results 
-      </div>
-      );
-    };
-    
-    export default SearchResults;
-    
-
-
-
-
-
-
-
-
-*/

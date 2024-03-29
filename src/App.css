@@ -755,9 +755,8 @@ nav li {
 }
 
 aside {
-  /* width: 50%;
-  margin: 0 auto;
-  gap: 6px; */
+  display: flex;
+  justify-content: space-evenly;
   padding-inline-end: 10px;
 }
 .margin-l {
@@ -809,6 +808,24 @@ aside {
     width: 100%;
     margin: 0 auto;
     max-width: 500px;
+  }
+
+  .white {
+    color: #fff;
+  }
+
+  .search-cont {
+    background-color: #2654e4;
+    border: 1px solid transparent;
+    margin: 10px auto;
+    border-radius: 69px;
+    height: 100%;
+    align-items: center;
+    padding: 10px 10px;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    display: flex;
   }
 
   .hide {
@@ -928,6 +945,12 @@ aside {
     margin: 0 auto;
   }
 
+  aside {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+  }
   .contact-btn {
     display: flex;
     height: 100%;
