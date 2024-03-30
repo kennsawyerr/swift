@@ -25,19 +25,21 @@ function FlightBooking() {
   };
 
   const handleDataTransfer = () => {
-    () => {
-      if (passengerValue.valueOf)
-        navigate("/flights", {
-          replace: true,
-          state: {
-            passengerValue,
-            returningDate,
-            departureDate,
-            travelDestination,
-          },
-        });
-    };
+    if (passengerValue.valueOf) {
+      travelDestination.value = "London";
+    } else {
+      navigate("/flights", {
+        replace: true,
+        state: {
+          passengerValue,
+          returningDate,
+          departureDate,
+          travelDestination,
+        },
+      });
+    }
   };
+
   const business = () => {
     setShowAppetizers(true);
     setShowAmenities(true);

@@ -789,6 +789,7 @@ aside {
     width: 100%;
     padding: 40px 10px;
     max-width: 500px;
+    min-width: 400px;
   }
   .contact-btn {
     display: flex;
@@ -949,6 +950,12 @@ aside {
 
   .smallImg {
     width: 180px;
+  }
+
+  .flight-location li {
+    padding: 2px;
+    width: 60%;
+    margin: 10px auto 0;
   }
 }
 
