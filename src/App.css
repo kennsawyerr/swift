@@ -590,7 +590,6 @@ hr {
 .flight-class-levels li {
   cursor: pointer;
   padding: 12px 19px;
-  margin: 3px 10px;
 }
 
 .flight-class-levels li:hover {
@@ -773,14 +772,8 @@ aside {
 }
 .grid-cont {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(200px, 1fr)
-  ); /* 2 columns, each with minimum width 200px */
-  grid-template-rows: repeat(
-    3,
-    auto
-  ); /* 3 rows, automatically adjust based on content */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, auto);
   grid-gap: 20px;
 }
 
@@ -789,7 +782,7 @@ aside {
     width: 100%;
     padding: 40px 10px;
     max-width: 500px;
-    min-width: 400px;
+    min-width: 300px;
   }
   .contact-btn {
     display: flex;
