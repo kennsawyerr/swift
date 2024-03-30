@@ -545,6 +545,10 @@ hr {
   padding: 60px 0;
 }
 
+.nav-link {
+  text-decoration: none;
+}
+
 .circle {
   width: 100px;
   height: 100px;

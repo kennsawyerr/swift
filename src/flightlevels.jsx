@@ -24,10 +24,25 @@ function FlightBooking() {
     setShowSeats(false);
   };
 
+  // const handleDataTransfer = () => {
+  //   navigate("/flights", {
+  //     replace: true,
+  //     state: {
+  //       passengerValue,
+  //       returningDate,
+  //       departureDate,
+  //       travelDestination,
+  //     },
+  //   });
+  // };
+
   const handleDataTransfer = () => {
-    if (passengerValue.valueOf) {
-      travelDestination.value = "London";
-    } else {
+    if (
+      passengerValue !== "" &&
+      returningDate !== "" &&
+      departureDate !== "" &&
+      travelDestination !== ""
+    ) {
       navigate("/flights", {
         replace: true,
         state: {
@@ -37,6 +52,8 @@ function FlightBooking() {
           travelDestination,
         },
       });
+    } else {
+      alert("Please fill in all required fields.");
     }
   };
 
