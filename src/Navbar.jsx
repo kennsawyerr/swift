@@ -21,7 +21,9 @@ function Navbar() {
 
             <div className="show">
               <div className="logo-header-mini">
-                <NavLink to="/">Sterling</NavLink>
+                <NavLink to="/" className="nav-link">
+                  Sterling
+                </NavLink>
               </div>
               <div className="logo-header_sub-mini">FLIGHT BOOKING AGENCY</div>
             </div>

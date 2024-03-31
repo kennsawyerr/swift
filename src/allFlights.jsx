@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import flightDataFile from "./flightdata.json";
 import { useLocation } from "react-router-dom";
-const AllFlights = () => {
+const AllFlights = (props) => {
   //[] means initialised with an empty array
 
   const location = useLocation();
-  console.log(location);
+  console.log("location", location);
+  console.log(props);
 
   const [displayFlights, setDisplayFlights] = useState([]);
 
@@ -50,6 +51,8 @@ travelDestination
       <div className="logistics-table">
         <ul className="flex flight-location">
           <li>{location.state.travelDestination}</li>
+          <li>Returning date:{location.state.departureDate}</li>
+          {/* <li>Returning :{props.departureDate}</li> */}
         </ul>
 
         <div>

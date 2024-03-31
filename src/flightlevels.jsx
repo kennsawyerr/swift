@@ -4,7 +4,7 @@ import userIcon from "./assets/user.png";
 import calendar from "./assets/calendar.png";
 import locationIcon from "./assets/location-marker-icon.png";
 import { useNavigate } from "react-router-dom";
-
+//use normal date not react date picker for your sanity
 import { AddSquare, MinusSquare } from "iconsax-react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -13,8 +13,14 @@ function FlightBooking() {
   const [showAppetizers, setShowAppetizers] = useState(false);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showSeats, setShowSeats] = useState(false);
-  const [departureDate, setDepartureDate] = useState(null);
-  const [returningDate, setReturningDate] = useState(null);
+  ///
+  ///
+  ///
+  ///
+  // const [departureDate, setDepartureDate] = useState(new Date(""));
+  const [departureDate, setDepartureDate] = useState("");
+
+  const [returningDate, setReturningDate] = useState("");
   const [passengerValue, setPassengerValue] = useState(false);
   const [travelDestination, setTravelDestination] = useState("");
 
@@ -79,9 +85,9 @@ function FlightBooking() {
     }
   };
 
-  const handleDatePickerChange = (date) => {
-    setReturningDate(date);
-  };
+  // const handleDatePickerChange = (date) => {
+  //   setReturningDate(date);
+  // };
 
   const navigate = useNavigate();
   // eslint-disable-next-line no-unused-vars
@@ -160,11 +166,18 @@ function FlightBooking() {
             <div>
               <h3>Check in</h3>
               <p>Add dates</p>
-              <ReactDatePicker
+              {/* <ReactDatePicker
                 selected={departureDate}
-                onChange={(date) => setDepartureDate(date)}
-                dateFormat="MM/dd/yyyy"
+                onSelect={(date) => setDepartureDate(date)}
+                dateFormat="EEE MMM dd yyyy"
                 placeholderText="Select a date"
+                minDate={new Date()}
+              /> */}
+              <input
+                type="date"
+                name=""
+                id=""
+                onChange={(e) => setDepartureDate(e.target.value)}
               />
             </div>
           </li>
@@ -178,10 +191,10 @@ function FlightBooking() {
               <p>Add dates</p>
               <ReactDatePicker
                 selected={returningDate}
-                // onChange={(date) => setReturningDate(date)}
-                onChange={handleDatePickerChange}
-                dateFormat="MM/dd/yyyy"
+                onSelect={(date) => setReturningDate(date)}
+                dateFormat="EEE MMM dd yyyy"
                 placeholderText="Select a date"
+                minDate={new Date()}
               />
             </div>
           </li>
@@ -217,3 +230,5 @@ function FlightBooking() {
 }
 
 export default FlightBooking;
+
+//onSelect is for date not onChange
