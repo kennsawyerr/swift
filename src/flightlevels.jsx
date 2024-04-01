@@ -221,11 +221,17 @@ function FlightBooking() {
           >
             Appetizers
           </li>
+          {/* 8119ce555bb415fcc7b18ae31ef9921f43d33f860db1b77278f6c31f6a1540ba503913dcf4a9eddd5c25b3df61294fff */}
           <li
             id="amenities"
             style={{ display: showAmenities ? "block" : "none" }}
           >
             Ammenities
+            <select name="" id="">
+              <option value="">Extra Blankets</option>
+              <option value=""></option>
+              <option value="">Blankets</option>
+            </select>
           </li>
           <li id="seats" style={{ display: showSeats ? "block" : "none" }}>
             Seats
@@ -239,3 +245,5 @@ function FlightBooking() {
 export default FlightBooking;
 
 //onSelect is for date not onChange
+
+// 8119ce555bb415fcc7b18ae31ef9921f43d33f860db1b77278f6c31f6a1540ba503913dcf4a9eddd5c25b3df61294fff
