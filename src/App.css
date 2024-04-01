@@ -781,6 +781,22 @@ aside {
   grid-gap: 20px;
 }
 
+.flight-data {
+  margin: auto 10px;
+}
+
+.flight-data li {
+  display: block;
+  padding: 20px 30px;
+  text-align: left;
+  border: 1px solid;
+}
+
+.b {
+  font-weight: bold;
+  font-size: 13px;
+  padding-bottom: 10px;
+}
 @media screen and (max-width: 600px) {
   .logistics-table {
     width: 100%;

@@ -28,33 +28,57 @@ const AllFlights = (props) => {
 
   return (
     <>
-      {/* <div>
-      <h1>Search Results</h1>
-      <p>Travelers: {location.state.passengerValue}</p>
-      <p>Location: {location.state.travelDestination}</p>
-      {/* <p>Check-in Date: {location.state.departureDate}</p> */}
-      {/* <p>Check-out Date: {location.state.returningDate}</p> */}
-
-      {/* departureDate
-: 
-Fri Mar 29 2024 00:00:00 GMT+0100 (West Africa Standard Time) {}
-passengerValue
-: 
-"1"
-returningDate
-: 
-Sat Apr 06 2024 00:00:00 GMT+0100 (West Africa Standard Time) {}
-travelDestination
-: 
-"Abuja" */}
-
       <div className="logistics-table">
-        <ul className="flex flight-location">
-          <li>{location.state.travelDestination}</li>
-          <li>Returning date:{location.state.departureDate}</li>
-          {/* <li>Returning :{props.departureDate}</li> */}
-        </ul>
+        <ul className="flex">
+          <li>
+            <select name="" id="">
+              <option value="Economy">Economy</option>
+              <option value="Business">Business</option>
+              <option value="First-class">First Class</option>
+            </select>
+          </li>
 
+          <li>
+            <select name="" id="">
+              <option value="">Round trip</option>
+              <option value="Business">One chance</option>
+              <option value="First-class">Japa</option>
+            </select>
+          </li>
+
+          <li>
+            <select name="" id="">
+              <option value="">1 Passenger</option>
+              <option value="Business">One chance</option>
+              <option value="First-class">Multiple chance</option>
+            </select>
+          </li>
+        </ul>
+        <div className="flex flight-location">
+          <ul className="flight-data flex">
+            <li>
+              <div className="b">From where?</div>
+              <div>Nigeria</div>
+            </li>
+
+            <li>
+              <div className="b">To where?</div>
+              <div>{location.state.travelDestination}</div>
+            </li>
+          </ul>
+
+          <ul className="flight-data flex">
+            <li>
+              <div className="b">Leaving on</div>
+              <div>{location.state.departureDate}</div>
+            </li>
+
+            <li>
+              <div className="b">Returning on</div>
+              <div>{location.state.returningDate}</div>
+            </li>
+          </ul>
+        </div>
         <div>
           <button>Take Flight?</button>
         </div>

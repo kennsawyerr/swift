@@ -6,7 +6,7 @@ import locationIcon from "./assets/location-marker-icon.png";
 import { useNavigate } from "react-router-dom";
 //use normal date not react date picker for your sanity
 import { AddSquare, MinusSquare } from "iconsax-react";
-import ReactDatePicker from "react-datepicker";
+// import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function FlightBooking() {
@@ -189,12 +189,19 @@ function FlightBooking() {
             <div>
               <h3>Check out</h3>
               <p>Add dates</p>
-              <ReactDatePicker
+              {/* <ReactDatePicker
                 selected={returningDate}
                 onSelect={(date) => setReturningDate(date)}
                 dateFormat="EEE MMM dd yyyy"
                 placeholderText="Select a date"
                 minDate={new Date()}
+              /> */}
+
+              <input
+                type="date"
+                name=""
+                id=""
+                onChange={(e) => setReturningDate(e.target.value)}
               />
             </div>
           </li>
