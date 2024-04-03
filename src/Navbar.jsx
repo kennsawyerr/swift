@@ -4,7 +4,7 @@ import menuImg from "./assets/menu.png";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const [collapse, setCollapse] = useState(false);
+  const [collapse, setCollapse] = useState(true);
 
   const toggleNavbar = () => {
     setCollapse(!collapse);
