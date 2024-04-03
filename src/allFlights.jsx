@@ -9,6 +9,8 @@ const AllFlights = (props) => {
   console.log(props);
 
   const [displayFlights, setDisplayFlights] = useState([]);
+  // eslint-disable-next-line no-unused-vars
+  const [flights, setFlights] = useState("");
 
   useEffect(() => {
     setDisplayFlights(flightDataFile);
@@ -26,9 +28,25 @@ const AllFlights = (props) => {
     }
   };
 
+  const apiToken =
+    "8119ce555bb415fcc7b18ae31ef9921f43d33f860db1b77278f6c31f6a1540ba503913dcf4a9eddd5c25b3df61294fff";
+  const airportApiUrl = `https://airportdb.io/api/v1/airport/{ICAO}?apiToken=${apiToken}`;
+
+  const fetchFlights = async () => {
+    try {
+      const response = await fetch(airportApiUrl);
+      const data = await response.json();
+      setFlights(data);
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    }
+  };
+
+  const FlightPassenger = location.state.passengerValue;
   return (
     <>
       <div className="logistics-table">
+        <button>{fetchFlights}</button>
         <ul className="flex">
           <li>
             <select name="" id="">
@@ -48,7 +66,7 @@ const AllFlights = (props) => {
 
           <li>
             <select name="" id="">
-              <option value="">1 Passenger</option>
+              <option value="">{FlightPassenger} Passenger</option>
               <option value="Business">One chance</option>
               <option value="First-class">Multiple chance</option>
             </select>
@@ -80,16 +98,17 @@ const AllFlights = (props) => {
           </ul>
         </div>
         <div>
-          <button>Take Flight?</button>
+          <button
+            onClick={() => filterFlights(location.state.travelDestination)}
+          >
+            Take Flight?
+          </button>
         </div>
       </div>
 
       <div className="container">
         <div>
-          <div>
-            <button onClick={() => filterFlights("Nigeria")}>Nigeria</button>
-            <button onClick={() => filterFlights("Togo")}>Togo</button>
-          </div>
+          <h3>Other Flights</h3>
           <div className="grid2">
             {displayFlights.map((item) => (
               <article key={item.id} className="flex tickets">
@@ -178,5 +197,3 @@ export default AllFlights;
 //     </>
 //   );
 // }
-
-// export default Flights;

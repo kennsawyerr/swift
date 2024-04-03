@@ -13,15 +13,10 @@ function FlightBooking() {
   const [showAppetizers, setShowAppetizers] = useState(false);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showSeats, setShowSeats] = useState(false);
-  ///
-  ///
-  ///
-  ///
-  // const [departureDate, setDepartureDate] = useState(new Date(""));
   const [departureDate, setDepartureDate] = useState("");
 
   const [returningDate, setReturningDate] = useState("");
-  const [passengerValue, setPassengerValue] = useState(false);
+  const [passengerValue, setPassengerValue] = useState(1);
   const [travelDestination, setTravelDestination] = useState("");
 
   const economy = () => {
@@ -29,18 +24,6 @@ function FlightBooking() {
     setShowAmenities(false);
     setShowSeats(false);
   };
-
-  // const handleDataTransfer = () => {
-  //   navigate("/flights", {
-  //     replace: true,
-  //     state: {
-  //       passengerValue,
-  //       returningDate,
-  //       departureDate,
-  //       travelDestination,
-  //     },
-  //   });
-  // };
 
   const handleDataTransfer = () => {
     if (
@@ -189,13 +172,6 @@ function FlightBooking() {
             <div>
               <h3>Check out</h3>
               <p>Add dates</p>
-              {/* <ReactDatePicker
-                selected={returningDate}
-                onSelect={(date) => setReturningDate(date)}
-                dateFormat="EEE MMM dd yyyy"
-                placeholderText="Select a date"
-                minDate={new Date()}
-              /> */}
 
               <input
                 type="date"
@@ -240,6 +216,15 @@ function FlightBooking() {
       </section>
     </>
   );
+
+  // const fetchFlights =async () => {
+  // try{
+  //   const response =await fetch(airportApiUrl);
+  //   const data =await response.json();
+  //    setFlights(data);
+  // } catch (error) {
+  //   console.error("Error fetching data: ", error)
+  // }
 }
 
 export default FlightBooking;

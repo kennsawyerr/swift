@@ -9,6 +9,10 @@ function Navbar() {
   const toggleNavbar = () => {
     setCollapse(!collapse);
   };
+
+  const comingSoon = () => {
+    alert("Coming soon");
+  };
   return (
     <>
       {/* {<ul className=" gap-20 flex ">} */}
@@ -45,7 +49,9 @@ function Navbar() {
             </li>
             <li className="show">About</li>
             <li className="show">Offers</li>
-            <li className="show">Seats</li>
+            <li className="show" onClick={comingSoon}>
+              Seats
+            </li>
             <li className="show">Destination</li>
           </ul>
         </div>
