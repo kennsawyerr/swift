@@ -9,14 +9,19 @@ function Navbar() {
   const toggleNavbar = () => {
     setCollapse(!collapse);
   };
+  const [messages, setMessages] = useState("");
+
+  const userMessages = () => {
+    setMessages("Coming soon.. no worry");
+  };
 
   const comingSoon = () => {
-    alert("Coming soon");
+    userMessages("Coming soon");
   };
   return (
     <>
-      {/* {<ul className=" gap-20 flex ">} */}
       <nav>
+        <div>{messages}</div>
         <div className=" flex">
           <div className=" container navigation">
             <div className="menu-btn">
