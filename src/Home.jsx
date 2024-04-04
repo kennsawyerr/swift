@@ -21,6 +21,7 @@ import calendarTwo from "./assets/calTwo.png";
 import checkCircle from "./assets/checkcircle.png";
 import discountIcon from "./assets/discount.png";
 import FlightLevels from "./flightlevels";
+import { NavLink } from "react-router-dom";
 import "./App.css";
 
 function Home() {
@@ -29,12 +30,18 @@ function Home() {
       <div className="container">
         <div className="main-navbar  flex">
           <div className="hide">
-            <div className="logo-header ">Sterling</div>
+            <NavLink to="/" className="nav-link">
+              <div className="logo-header ">Sterling</div>
+            </NavLink>
             <div className="logo-header_sub ">FLIGHT BOOKING AGENCY</div>
           </div>
 
           <ul className="navMenu hide">
-            <li>Home</li>
+            <li>
+              <NavLink to="/" className="nav-link">
+                Home
+              </NavLink>
+            </li>
             <li>About</li>
             <li>Offers</li>
             <li>Seats</li>

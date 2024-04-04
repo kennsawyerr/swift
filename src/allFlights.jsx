@@ -1,30 +1,33 @@
 import { useEffect, useState } from "react";
 import flightDataFile from "./flightdata.json";
 import { useLocation } from "react-router-dom";
-const AllFlights = (props) => {
+const AllFlights = () => {
   //[] means initialised with an empty array
 
   const location = useLocation();
-  console.log("location", location);
-  console.log(props);
 
   const [displayFlights, setDisplayFlights] = useState([]);
   // eslint-disable-next-line no-unused-vars
+  const [flightsMessage, setFlightsMessage] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [flights, setFlights] = useState("");
+  // const [memo, setMemo] = useState("");
 
   useEffect(() => {
     setDisplayFlights(flightDataFile);
   }, []);
-  //  if(e.key==="Enter"){};If (e.keyvalue===”Enter”) {}- first add eventlistener to the button-for search features
 
   const filterFlights = (locationDestination) => {
-    if (locationDestination === "all") {
-      setDisplayFlights(flightDataFile);
-    } else {
-      const alreadyfilteredFlights = flightDataFile.filter(
-        (item) => item.departure_location === locationDestination
-      );
+    const alreadyfilteredFlights = flightDataFile.filter(
+      (item) => item.departure_location === locationDestination
+    );
+
+    if (alreadyfilteredFlights.length > 0) {
       setDisplayFlights(alreadyfilteredFlights);
+      console.log("memo", "Filtered flights displayed");
+    } else {
+      setFlightsMessage("no flights found");
+      console.log("memo", "No matching flights message displayed");
     }
   };
 
@@ -32,6 +35,7 @@ const AllFlights = (props) => {
     "8119ce555bb415fcc7b18ae31ef9921f43d33f860db1b77278f6c31f6a1540ba503913dcf4a9eddd5c25b3df61294fff";
   const airportApiUrl = `https://airportdb.io/api/v1/airport/{ICAO}?apiToken=${apiToken}`;
 
+  // eslint-disable-next-line no-unused-vars
   const fetchFlights = async () => {
     try {
       const response = await fetch(airportApiUrl);
@@ -43,69 +47,108 @@ const AllFlights = (props) => {
   };
 
   const FlightPassenger = location.state.passengerValue;
+  const travelDestination = location.state.travelDestination;
   return (
     <>
-      <div className="logistics-table">
-        <button>{fetchFlights}</button>
-        <ul className="flex">
-          <li>
-            <select name="" id="">
-              <option value="Economy">Economy</option>
-              <option value="Business">Business</option>
-              <option value="First-class">First Class</option>
-            </select>
-          </li>
-
-          <li>
-            <select name="" id="">
-              <option value="">Round trip</option>
-              <option value="Business">One chance</option>
-              <option value="First-class">Japa</option>
-            </select>
-          </li>
-
-          <li>
-            <select name="" id="">
-              <option value="">{FlightPassenger} Passenger</option>
-              <option value="Business">One chance</option>
-              <option value="First-class">Multiple chance</option>
-            </select>
-          </li>
-        </ul>
-        <div className="flex flight-location">
-          <ul className="flight-data flex">
+      <section className="choosingFlight">
+        <div className="chooseFlight-table tableau">
+          <ul className="flex">
             <li>
-              <div className="b">From where?</div>
-              <div>Nigeria</div>
+              <select name="" id="">
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="First-class">First Class</option>
+              </select>
+            </li>
+
+            {/* .logistics-table li {
+  padding: 8px;
+
+
+} 
+
+.logistics-table {
+  display: flex;
+  margin: 0 auto;
+  padding: 40px 56px;
+  max-width: 1000px;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  gap: 48px;
+  border-radius: 24px;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+max-width 993px
+ .logistics-table {
+    width: 100%;
+    padding: 40px 10px;
+    max-width: 900px;
+  }
+
+  600
+   .logistics-table {
+    width: 100%;
+    padding: 40px 10px;
+    max-width: 500px;
+    min-width: 300px;
+  }
+
+*/}
+
+            <li>
+              <select name="" id="">
+                <option value="">Round trip</option>
+                <option value="Business">One chance</option>
+                <option value="First-class">Japa</option>
+              </select>
             </li>
 
             <li>
-              <div className="b">To where?</div>
-              <div>{location.state.travelDestination}</div>
+              <select name="" id="">
+                <option value="">{FlightPassenger} Passenger</option>
+                <option value="Business">One chance</option>
+                <option value="First-class">Multiple chance</option>
+              </select>
             </li>
           </ul>
+          <div className="flex flight-location">
+            <ul className="flight-data flex">
+              <li>
+                <div className="b">From where?</div>
+                <div>Nigeria</div>
+              </li>
 
-          <ul className="flight-data flex">
-            <li>
-              <div className="b">Leaving on</div>
-              <div>{location.state.departureDate}</div>
-            </li>
+              <li>
+                <div className="b">To where?</div>
+                <div>{location.state.travelDestination}</div>
+              </li>
+            </ul>
 
-            <li>
-              <div className="b">Returning on</div>
-              <div>{location.state.returningDate}</div>
-            </li>
-          </ul>
+            <ul className="flight-data flex">
+              <li>
+                <div className="b">Leaving on</div>
+                <div>{location.state.departureDate}</div>
+              </li>
+
+              <li>
+                <div className="b">Returning on</div>
+                <div>{location.state.returningDate}</div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <button onClick={() => filterFlights(travelDestination)}>
+              Take Flight ?
+            </button>
+          </div>
         </div>
-        <div>
-          <button
-            onClick={() => filterFlights(location.state.travelDestination)}
-          >
-            Take Flight?
-          </button>
-        </div>
-      </div>
+      </section>
 
+      <div className="container">{flightsMessage}</div>
       <div className="container">
         <div>
           <h3>Other Flights</h3>
