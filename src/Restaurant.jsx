@@ -5,46 +5,32 @@ const Menu = () => {
   const [filteredMenu, setFilteredMenu] = useState([]);
 
   useEffect(() => {
-    setFilteredMenu(menuData); // Initialize filteredMenu state with menuData on component mount
+    setFilteredMenu(menuData);
   }, []);
 
-  //   const filterMenu = (category) => {
-  //     if (category === "all")
-  //     //if (location === "all")
-  //     {
-  //       setFilteredMenu(menuData);
-  //     } else {
-  //       const filtered = menuData.filter((item) => item.category === category);
-  //       //const filtered = flightsData.filter((item)=> item.location ===location);
-  //       setFilteredMenu(filtered);
-  //       //setFlightsLocation(flightsData)
-  //     }
-  //   };
-
   return (
-    <div>
-      {/* <div className="filters">
-        <button onClick={() => filterMenu("all")}>All</button>
-        <button onClick={() => filterMenu("breakfast")}>Breakfast</button>
-        <button onClick={() => filterMenu("lunch")}>Lunch</button>
-        <button onClick={() => filterMenu("shakes")}>Shakes</button>
-      </div> */}
-      <div className="menu">
-        {filteredMenu.map((item) => (
-          <article key={item.id} className="menu-item">
-            <img src={item.img} alt={item.title} className="photo" />
-            <div className="item-info">
-              <header>
-                <h4>{item.title}</h4>
-                <h4 className="price">${item.price}</h4>
-              </header>
-              <p className="item-text">{item.desc}</p>
-            </div>
-          </article>
-        ))}
+    <>
+      {" "}
+      <div className="container">
+        <div className="menu">
+          {filteredMenu.map((item) => (
+            <article key={item.id} className="menu-item">
+              <img src={item.img} alt={item.title} className="photo" />
+              <div className="item-info">
+                <header>
+                  <h4>{item.title}</h4>
+                  <h4 className="price">${item.price}</h4>
+                </header>
+                <p className="item-text">{item.desc}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Menu;
+
+//restaurant firstclass should have unlimited menu choices, while the rest should have blocked meals. the design should be like a slide, for food and drinks
