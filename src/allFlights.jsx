@@ -61,44 +61,6 @@ const AllFlights = () => {
               </select>
             </li>
 
-            {/* .logistics-table li {
-  padding: 8px;
-
-
-} 
-
-.logistics-table {
-  display: flex;
-  margin: 0 auto;
-  padding: 40px 56px;
-  max-width: 1000px;
-  flex-direction: column;
-  align-items: center;
-  justify-self: center;
-  gap: 48px;
-  border-radius: 24px;
-  border: 1px solid #dcdcdc;
-  background: #fff;
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
-}
-
-max-width 993px
- .logistics-table {
-    width: 100%;
-    padding: 40px 10px;
-    max-width: 900px;
-  }
-
-  600
-   .logistics-table {
-    width: 100%;
-    padding: 40px 10px;
-    max-width: 500px;
-    min-width: 300px;
-  }
-
-*/}
-
             <li>
               <select name="" id="">
                 <option value="">Round trip</option>
