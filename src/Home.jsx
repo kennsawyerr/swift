@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 // import FaAngleDoubleRight from "./assets/search.png";
-import bestTravelsFour from "./assets/bestTravelsFour.png";
+import bestTravelsFour from "./assets/dubai-trip.jpg";
 import planeImageone from "./assets/planeone.png";
 import planeImagetwo from "./assets/planetwo.png";
 import planeImagethree from "./assets/planethree.png";

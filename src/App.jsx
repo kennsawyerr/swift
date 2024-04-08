@@ -12,6 +12,7 @@ import Seats from "./Seats";
 import Appetizers from "./Appetizers";
 import Ammenities from "./Ammenities";
 import Restaurant from "./Restaurant";
+import Rant from "./rant";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/appetizers" element={<Appetizers />} />
             <Route path="/ammenities" element={<Ammenities />} />
             <Route path="/restaurant" element={<Restaurant />} />
+            <Route path="/rant" element={<Rant />} />
           </Routes>
         </Router>
       </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import menuData from "./menu.json";
+import menuData from "./images/menu.json";
+import imageLorem from "./images/item-1.jpeg";
 
 const Menu = () => {
   const [filteredMenu, setFilteredMenu] = useState([]);
@@ -10,12 +11,11 @@ const Menu = () => {
 
   return (
     <>
-      {" "}
       <div className="container">
-        <div className="menu">
+        <div className="menu flex">
           {filteredMenu.map((item) => (
             <article key={item.id} className="menu-item">
-              <img src={item.img} alt={item.title} className="photo" />
+              <img src={imageLorem} alt={item.title} className="photo" />
               <div className="item-info">
                 <header>
                   <h4>{item.title}</h4>

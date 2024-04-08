@@ -74,25 +74,6 @@ function FlightBooking() {
 
   const navigate = useNavigate();
   // eslint-disable-next-line no-unused-vars
-  const [formData, setFormData] = useState({
-    travelers: "",
-    location: "",
-    checkInDate: "",
-    checkOutDate: "",
-  });
-
-  // const handleChange = (e) => {
-  //   const { name, value ,id } = e.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: value, id
-  //   }));
-  // };
-
-  // const handleSearch = () => {
-
-  //   navigate('./allFlights.jsx', { state: { formData } });
-  // };
 
   return (
     <>
@@ -195,22 +176,24 @@ function FlightBooking() {
             id="appetizers"
             style={{ display: showAppetizers ? "block" : "none" }}
           >
-            Appetizers
+            <h3>Appetizers</h3>
           </li>
           {/* 8119ce555bb415fcc7b18ae31ef9921f43d33f860db1b77278f6c31f6a1540ba503913dcf4a9eddd5c25b3df61294fff */}
           <li
             id="amenities"
             style={{ display: showAmenities ? "block" : "none" }}
           >
-            Ammenities
-            <select name="" id="">
-              <option value="">Extra Blankets</option>
-              <option value=""></option>
-              <option value="">Blankets</option>
-            </select>
+            <h3>
+              <select name="" id="">
+                <option value="">Ammenitites</option>
+                <option value="">Extra Blankets</option>
+                <option value="">Convenience services</option>
+                <option value="">Others</option>
+              </select>
+            </h3>
           </li>
           <li id="seats" style={{ display: showSeats ? "block" : "none" }}>
-            Seats
+            <h3>Seats</h3>
           </li>
         </ul>
       </section>
