@@ -23,6 +23,7 @@ import discountIcon from "./assets/discount.png";
 import FlightLevels from "./flightlevels";
 import { NavLink } from "react-router-dom";
 import "./App.css";
+import Memories from "./Memories";
 import BestTravel from "./Best-travels";
 
 function Home() {
@@ -129,59 +130,8 @@ function Home() {
             </div>
           </section>
         </div>
-        <section className="memories">
-          <div className="container">
-            {" "}
-            <div className="flex">
-              <h1>
-                Travel to <span>make memories</span> all around the world
-              </h1>
 
-              <button>View all</button>
-            </div>
-            <div className="cont-cards">
-              <div className="cards">
-                <div className="circle blue">
-                  <img src={calendarTwo} alt="" />
-                </div>
-                <h5>Book & Relax</h5>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Rutrum mi quisque diam
-                  dignissim duis volutpat. Orci vel molestie vitae purus felis
-                  urna tincidunt.
-                </p>
-              </div>
-
-              <div className="cards">
-                <div className="circle brown">
-                  <img src={checkCircle} alt="" />
-                </div>
-                <h5>Smart check list</h5>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Rutrum mi quisque diam
-                  dignissim duis volutpat. Orci vel molestie vitae purus felis
-                  urna tincidunt.
-                </p>
-              </div>
-
-              <div className="cards">
-                <div className="circle pink">
-                  <img src={discountIcon} alt="" />
-                </div>
-                <h5>Save more</h5>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Rutrum mi quisque diam
-                  dignissim duis volutpat. Orci vel molestie vitae purus felis
-                  urna tincidunt.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <Memories />
         <article className="flex container">
           <div className="image-cont-3">
             <img src={planeImageone} alt="" className="biggerImg" />
