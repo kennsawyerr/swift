@@ -838,11 +838,19 @@ aside {
     min-width: 300px;
   }
 
+  .traveling-cont {
+    flex-wrap: nowrap; /* Prevent wrapping of flex items */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+  }
+
   .grid-cont {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-template-rows: repeat(3, auto);
-    grid-gap: 20px;
+    grid-template-columns: 290px 290px 290px 290px;
+
+    /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+    grid-template-rows: unset;
+    grid-gap: 35px;
   }
 
   .chooseFlight-table {

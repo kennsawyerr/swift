@@ -13,6 +13,7 @@ import Appetizers from "./Appetizers";
 import Ammenities from "./Ammenities";
 import Restaurant from "./Restaurant";
 import Rant from "./rant";
+import BestTravel from "./Best-travels";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/ammenities" element={<Ammenities />} />
             <Route path="/restaurant" element={<Restaurant />} />
             <Route path="/rant" element={<Rant />} />
+            <Route path="/best-travels" element={<BestTravel />} />
           </Routes>
         </Router>
       </div>

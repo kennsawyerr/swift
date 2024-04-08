@@ -23,6 +23,7 @@ import discountIcon from "./assets/discount.png";
 import FlightLevels from "./flightlevels";
 import { NavLink } from "react-router-dom";
 import "./App.css";
+import BestTravel from "./Best-travels";
 
 function Home() {
   return (
@@ -228,50 +229,7 @@ function Home() {
           </div>
         </article>
 
-        <section className="travel-of-the-mth">
-          <div className="container">
-            <h3>
-              {" "}
-              <span>Best travels</span> of the month
-            </h3>
-
-            <div>
-              <ul className="grid-cont ">
-                <li className="bestTravel">
-                  <div className="image-mth-cont">
-                    <img src={bestTravelsFour} alt="" className="month-img" />
-                  </div>
-                  <h5>Jacob Jones</h5>
-                  <p>Lorem ipsum</p>
-                </li>
-
-                <li className="bestTravel">
-                  <div className="image-mth-cont">
-                    <img src={bestTravelsFour} alt="" className="month-img" />
-                  </div>
-                  <h5>Jacob Jones</h5>
-                  <p>Lorem ipsum</p>
-                </li>
-
-                <li className="bestTravel">
-                  <div className="image-mth-cont">
-                    <img src={bestTravelsFour} alt="" className="month-img" />
-                  </div>
-                  <h5>Jacob Jones</h5>
-                  <p>Lorem ipsum</p>
-                </li>
-
-                <li className="bestTravel">
-                  <div className="image-mth-cont">
-                    <img src={bestTravelsFour} alt="" className="month-img" />
-                  </div>
-                  <h5>Jacob Jones</h5>
-                  <p>Lorem ipsum</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <BestTravel />
 
         <section className="newsletter">
           <div className="container">
