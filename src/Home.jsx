@@ -11,10 +11,7 @@ import plane from "./assets/plane-mockup.png";
 import search from "./assets/search.png";
 
 // social media
-import socialfb from "./assets/Fb.png";
-import socialig from "./assets/Ig.png";
-import socialtw from "./assets/Tw.png";
-import socialln from "./assets/Ln.png";
+
 import userIcon from "./assets/user.png";
 
 import calendarTwo from "./assets/calTwo.png";
@@ -213,57 +210,8 @@ function Home() {
             })}
             job info */}
 
-            <article className="job-info">
-              {/* <h3>{title}</h3> */}
-              {/* <h4>{company}</h4> */}
-              {/* <p className="job-date">{dates}</p> */}
-              {/* {duties.map((duty, index) => {
-                return (
-                  <div key={index} className="job-desc">
-                    <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
-                  </div>
-                );
-              })} */}
-            </article>
+            <article className="job-info"></article>
           </section>
-
-          <hr />
-
-          {/* end */}
-          <footer>
-            <p className="p1">CONVINCED?</p>
-            <h5>Lets travel the world together!</h5>
-            <p className="p2">
-              Let us unleash our creativity and expertise to create designs that
-              deliver extraordinary results.
-            </p>
-
-            <button>Shoot us a DM</button>
-
-            <div className="flex footer-last-elem">
-              <div>
-                <div className="logo-header white">Sterling</div>
-                <div className="logo-header_sub white">
-                  FLIGHT BOOKING AGENCY
-                </div>
-              </div>
-              <small> &#169; 2020 Rayna. All rights reserved</small>
-              <ul className="social-m-icons">
-                <li>
-                  <img src={socialfb} alt="" />
-                </li>
-                <li>
-                  <img src={socialtw} alt="" />
-                </li>
-                <li>
-                  <img src={socialig} alt="" />
-                </li>
-                <li>
-                  <img src={socialln} alt="" />
-                </li>
-              </ul>
-            </div>
-          </footer>
         </div>
       </main>
     </>

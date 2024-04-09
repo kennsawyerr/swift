@@ -44,9 +44,6 @@ function Navbar() {
             <li className="margin-l">Sign up</li>
             <li className="">Sign in</li>
 
-            <li>
-              <NavLink to="/flights">Flights</NavLink>
-            </li>
             <li className="show">
               <NavLink className="nav-link" to="/">
                 Home

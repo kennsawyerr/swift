@@ -263,7 +263,7 @@ main {
     rgba(73, 153, 228, 0.5),
     rgba(73, 153, 228, 0.5)
   );
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(73, 153, 228, 0.5);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
