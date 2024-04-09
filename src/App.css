@@ -1069,6 +1069,20 @@ aside {
 
     margin: 10px auto 0;
   }
+
+  .flight-data li {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .flex-all-the-way li {
+    width: 100%;
+  }
+  .flex-all-the-way {
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
 }
 
 /* responsive  */
@@ -1200,6 +1214,11 @@ aside {
 
   .search-cont {
     font-size: 18px;
+  }
+
+  .flight-data li {
+    width: 100%;
+    max-width: 300px;
   }
 }
 
