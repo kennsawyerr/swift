@@ -181,6 +181,11 @@ main {
   line-height: 32px; /* 177.778% */
 }
 
+.loader {
+  width: 100px;
+  border: 1px solid;
+  margin: 0 auto;
+}
 .bestTravel p {
   color: #808080;
 

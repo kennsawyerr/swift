@@ -25,10 +25,12 @@ import { NavLink } from "react-router-dom";
 import "./App.css";
 import Memories from "./Memories";
 import BestTravel from "./Best-travels";
+import Loader from "./Loader";
 
 function Home() {
   return (
     <>
+      <Loader />
       <div className="container">
         <div className="main-navbar  flex">
           <div className="hide">
