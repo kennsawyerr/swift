@@ -145,6 +145,25 @@ main {
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
 }
 
+.snacks-cont {
+  width: 100%;
+  overflow-x: scroll;
+}
+.snacks_flex {
+  display: flex;
+}
+.snacks {
+  border: 3px solid;
+  margin: 20px;
+}
+.snacks_img {
+  width: 200px;
+}
+.snacks_hero-title {
+  padding-bottom: 2px;
+  font-size: 20px;
+}
+
 .bestTravel {
   border-radius: 268px;
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;

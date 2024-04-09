@@ -21,15 +21,26 @@ const Rant = () => {
   };
 
   return (
-    <div>
-      {meals.map((meal) => (
-        <div key={meal.idMeal}>
-          <h2>{meal.strMeal}</h2>
-          <img src={meal.strMealThumb} alt={meal.strMeal} />
-          <p>{meal.strCategory}</p>
+    <>
+      <section className="snacks-cont container">
+        <h1>What Would you like to have?</h1>
+
+        <h2>Meals. snacks . Desserts</h2>
+        <div className="flex  snacks_flex">
+          {meals.map((meal) => (
+            <div key={meal.idMeal} className="snacks">
+              <h2 className="snacks_hero-title"> {meal.strMeal}</h2>
+              <img
+                src={meal.strMealThumb}
+                className="snacks_img"
+                alt={meal.strMeal}
+              />
+              <p>{meal.strCategory}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </section>
+    </>
   );
 };
 
