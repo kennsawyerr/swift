@@ -52,7 +52,7 @@ const AllFlights = () => {
     <>
       <section className="choosingFlight">
         <div className="chooseFlight-table tableau">
-          <ul className="flex">
+          <ul className="flex-all-the-way">
             <li>
               <select name="" id="">
                 <option value="Economy">Economy</option>
