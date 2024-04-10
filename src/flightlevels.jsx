@@ -3,6 +3,7 @@ import search from "./assets/search.png";
 import userIcon from "./assets/user.png";
 import calendar from "./assets/calendar.png";
 import locationIcon from "./assets/location-marker-icon.png";
+import airportData from "./airports.json";
 import { useNavigate } from "react-router-dom";
 //use normal date not react date picker for your sanity
 import { AddSquare, MinusSquare } from "iconsax-react";
@@ -10,6 +11,7 @@ import { AddSquare, MinusSquare } from "iconsax-react";
 import "react-datepicker/dist/react-datepicker.css";
 
 function FlightBooking() {
+  const [value, setValue] = useState("");
   const [showAppetizers, setShowAppetizers] = useState(false);
   const [showAmenities, setShowAmenities] = useState(false);
   const [showSeats, setShowSeats] = useState(false);
@@ -67,10 +69,21 @@ function FlightBooking() {
       setPassengerValue((prevCount) => prevCount - 1);
     }
   };
+  const onSearch = (searchItem) => {
+    setValue(searchItem);
+  };
 
   // const handleDatePickerChange = (date) => {
   //   setReturningDate(date);
   // };
+  //  const valueChange = (event) => {
+  //    setValue(event.target.value);
+  //  };
+
+  const handleInputValueChange = (event) => {
+    setValue(event.target.value);
+    setTravelDestination(event.target.value);
+  };
 
   const navigate = useNavigate();
   // eslint-disable-next-line no-unused-vars
@@ -98,11 +111,36 @@ function FlightBooking() {
                 type="text"
                 name=""
                 id=""
+                value={value}
+                className="location-input"
                 placeholder="location"
-                onChange={(event) => {
-                  setTravelDestination(event.target.value);
-                }}
+                onChange={handleInputValueChange}
               />
+              <div className="dropdown">
+                {airportData
+                  .filter((item) => {
+                    const searchItem = value.toLowerCase();
+                    const fullName = item.city.toLowerCase();
+
+                    return (
+                      searchItem &&
+                      fullName.startsWith(searchItem) &&
+                      fullName !== searchItem
+                    );
+                  })
+                  .slice(0, 10)
+                  .map((item) => (
+                    <div
+                      onClick={() => {
+                        onSearch(item.city);
+                      }}
+                      className="dropdown-row"
+                      key={item.city}
+                    >
+                      {item.city}
+                    </div>
+                  ))}
+              </div>
             </div>
           </li>
 
@@ -121,8 +159,6 @@ function FlightBooking() {
             </div>
           </li>
 
-          {/*  <input type="text" name="username" placeholder="username" onChange={(event) => {setName(event.target.value)}} /> */}
-
           <li>
             <div>
               <img src={calendar} alt="" />
@@ -130,13 +166,7 @@ function FlightBooking() {
             <div>
               <h3>Check in</h3>
               <p>Add dates</p>
-              {/* <ReactDatePicker
-                selected={departureDate}
-                onSelect={(date) => setDepartureDate(date)}
-                dateFormat="EEE MMM dd yyyy"
-                placeholderText="Select a date"
-                minDate={new Date()}
-              /> */}
+
               <input
                 type="date"
                 name=""

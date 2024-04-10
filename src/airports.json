@@ -1,0 +1,506 @@
+[
+  {
+    "name": "Murtala Muhammed International Airport",
+    "code": "LOS",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Nnamdi Azikiwe International Airport",
+    "code": "ABV",
+    "city": "Abuja",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Port Harcourt International Airport",
+    "code": "PHC",
+    "city": "Port Harcourt",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Akanu Ibiam International Airport",
+    "code": "ENU",
+    "city": "Enugu",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Kaduna International Airport",
+    "code": "KAD",
+    "city": "Kaduna",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Mallam Aminu Kano International Airport",
+    "code": "KAN",
+    "city": "Kano",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Asaba International Airport",
+    "code": "ABB",
+    "city": "Asaba",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Ilorin International Airport",
+    "code": "ILR",
+    "city": "Ilorin",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Sam Mbakwe International Cargo Airport",
+    "code": "QOW",
+    "city": "Owerri",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Yakubu Gowon Airport",
+    "code": "JOS",
+    "city": "Jos",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Margaret Ekpo International Airport",
+    "code": "CBQ",
+    "city": "Calabar",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Sadiq Abubakar III International Airport",
+    "code": "SKO",
+    "city": "Sokoto",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Yola Airport",
+    "code": "YOL",
+    "city": "Yola",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Benin City Airport",
+    "code": "BNI",
+    "city": "Benin City",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Akure Airport",
+    "code": "AKR",
+    "city": "Akure",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Gombe Lawanti International Airport",
+    "code": "GMO",
+    "city": "Gombe",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Akanu Ibiam International Airport",
+    "code": "QRW",
+    "city": "Warri",
+    "country": "Nigeria"
+  },
+  {
+    "name": "Hartsfield-Jackson Atlanta International Airport",
+    "code": "ATL",
+    "city": "Atlanta",
+    "country": "United States"
+  },
+  {
+    "name": "Los Angeles International Airport",
+    "code": "LAX",
+    "city": "Los Angeles",
+    "country": "United States"
+  },
+  {
+    "name": "Chicago O'Hare International Airport",
+    "code": "ORD",
+    "city": "Chicago",
+    "country": "United States"
+  },
+  {
+    "name": "Dallas/Fort Worth International Airport",
+    "code": "DFW",
+    "city": "Dallas/Fort Worth",
+    "country": "United States"
+  },
+  {
+    "name": "Denver International Airport",
+    "code": "DEN",
+    "city": "Denver",
+    "country": "United States"
+  },
+  {
+    "name": "John F. Kennedy International Airport",
+    "code": "JFK",
+    "city": "New York City",
+    "country": "United States"
+  },
+  {
+    "name": "San Francisco International Airport",
+    "code": "SFO",
+    "city": "San Francisco",
+    "country": "United States"
+  },
+  {
+    "name": "Seattle-Tacoma International Airport",
+    "code": "SEA",
+    "city": "Seattle",
+    "country": "United States"
+  },
+  {
+    "name": "McCarran International Airport",
+    "code": "LAS",
+    "city": "Las Vegas",
+    "country": "United States"
+  },
+  {
+    "name": "Orlando International Airport",
+    "code": "MCO",
+    "city": "Orlando",
+    "country": "United States"
+  },
+  {
+    "name": "Miami International Airport",
+    "code": "MIA",
+    "city": "Miami",
+    "country": "United States"
+  },
+  {
+    "name": "Charlotte Douglas International Airport",
+    "code": "CLT",
+    "city": "Charlotte",
+    "country": "United States"
+  },
+  {
+    "name": "Phoenix Sky Harbor International Airport",
+    "code": "PHX",
+    "city": "Phoenix",
+    "country": "United States"
+  },
+  {
+    "name": "George Bush Intercontinental Airport",
+    "code": "IAH",
+    "city": "Houston",
+    "country": "United States"
+  },
+  {
+    "name": "Minneapolis-Saint Paul International Airport",
+    "code": "MSP",
+    "city": "Minneapolis",
+    "country": "United States"
+  },
+  {
+    "name": "Detroit Metropolitan Wayne County Airport",
+    "code": "DTW",
+    "city": "Detroit",
+    "country": "United States"
+  },
+  {
+    "name": "Philadelphia International Airport",
+    "code": "PHL",
+    "city": "Philadelphia",
+    "country": "United States"
+  },
+  {
+    "name": "Newark Liberty International Airport",
+    "code": "EWR",
+    "city": "Newark",
+    "country": "United States"
+  },
+  {
+    "name": "Logan International Airport",
+    "code": "BOS",
+    "city": "Boston",
+    "country": "United States"
+  },
+  {
+    "name": "Baltimore/Washington International Thurgood Marshall Airport",
+    "code": "BWI",
+    "city": "Baltimore",
+    "country": "United States"
+  },
+  {
+    "name": "Salt Lake City International Airport",
+    "code": "SLC",
+    "city": "Salt Lake City",
+    "country": "United States"
+  },
+  {
+    "name": "Ronald Reagan Washington National Airport",
+    "code": "DCA",
+    "city": "Washington, D.C.",
+    "country": "United States"
+  },
+  {
+    "name": "Fort Lauderdale-Hollywood International Airport",
+    "code": "FLL",
+    "city": "Fort Lauderdale",
+    "country": "United States"
+  },
+  {
+    "name": "Chicago Midway International Airport",
+    "code": "MDW",
+    "city": "Chicago",
+    "country": "United States"
+  },
+  {
+    "name": "LaGuardia Airport",
+    "code": "LGA",
+    "city": "New York City",
+    "country": "United States"
+  },
+  {
+    "name": "San Diego International Airport",
+    "code": "SAN",
+    "city": "San Diego",
+    "country": "United States"
+  },
+  {
+    "name": "Dallas Love Field",
+    "code": "DAL",
+    "city": "Dallas",
+    "country": "United States"
+  },
+  {
+    "name": "Washington Dulles International Airport",
+    "code": "IAD",
+    "city": "Washington, D.C.",
+    "country": "United States"
+  },
+  {
+    "name": "John Wayne Airport",
+    "code": "SNA",
+    "city": "Santa Ana",
+    "country": "United States"
+  },
+  {
+    "name": "Tampa International Airport",
+    "code": "TPA",
+    "city": "Tampa",
+    "country": "United States"
+  },
+  {
+    "name": "Nashville International Airport",
+    "code": "BNA",
+    "city": "Nashville",
+    "country": "United States"
+  },
+  {
+    "name": "San Antonio International Airport",
+    "code": "SAT",
+    "city": "San Antonio",
+    "country": "United States"
+  },
+  {
+    "name": "Oakland International Airport",
+    "code": "OAK",
+    "city": "Oakland",
+    "country": "United States"
+  },
+  {
+    "name": "Austin-Bergstrom International Airport",
+    "code": "AUS",
+    "city": "Austin",
+    "country": "United States"
+  },
+  {
+    "name": "Sacramento International Airport",
+    "code": "SMF",
+    "city": "Sacramento",
+    "country": "United States"
+  },
+  {
+    "name": "Kansas City International Airport",
+    "code": "MCI",
+    "city": "Kansas City",
+    "country": "United States"
+  },
+  {
+    "name": "Cleveland Hopkins International Airport",
+    "code": "CLE",
+    "city": "Cleveland",
+    "country": "United States"
+  },
+  {
+    "name": "Louis Armstrong New Orleans International Airport",
+    "code": "MSY",
+    "city": "New Orleans",
+    "country": "United States"
+  },
+  {
+    "name": "Raleigh-Durham International Airport",
+    "code": "RDU",
+    "city": "Raleigh/Durham",
+    "country": "United States"
+  },
+  {
+    "name": "Athens International Airport",
+    "code": "ATH",
+    "city": "Athens",
+    "country": "Greece"
+  },
+  {
+    "name": "Thessaloniki Airport",
+    "code": "SKG",
+    "city": "Thessaloniki",
+    "country": "Greece"
+  },
+  {
+    "name": "Heraklion International Airport",
+    "code": "HER",
+    "city": "Heraklion",
+    "country": "Greece"
+  },
+  {
+    "name": "Rhodes International Airport",
+    "code": "RHO",
+    "city": "Rhodes",
+    "country": "Greece"
+  },
+  {
+    "name": "Chania International Airport",
+    "code": "CHQ",
+    "city": "Chania",
+    "country": "Greece"
+  },
+  {
+    "name": "Corfu International Airport",
+    "code": "CFU",
+    "city": "Corfu",
+    "country": "Greece"
+  },
+  {
+    "name": "Kos Island International Airport",
+    "code": "KGS",
+    "city": "Kos",
+    "country": "Greece"
+  },
+  {
+    "name": "Mykonos International Airport",
+    "code": "JMK",
+    "city": "Mykonos",
+    "country": "Greece"
+  },
+  {
+    "name": "Santorini (Thira) International Airport",
+    "code": "JTR",
+    "city": "Santorini",
+    "country": "Greece"
+  },
+  {
+    "name": "Zakynthos International Airport",
+    "code": "ZTH",
+    "city": "Zakynthos",
+    "country": "Greece"
+  },
+  {
+    "name": "Kefalonia Island International Airport",
+    "code": "EFL",
+    "city": "Kefalonia",
+    "country": "Greece"
+  },
+  {
+    "name": "Skiathos Island National Airport",
+    "code": "JSI",
+    "city": "Skiathos",
+    "country": "Greece"
+  },
+  {
+    "name": "Kavala International Airport",
+    "code": "KVA",
+    "city": "Kavala",
+    "country": "Greece"
+  },
+  {
+    "name": "Samos International Airport",
+    "code": "SMI",
+    "city": "Samos",
+    "country": "Greece"
+  },
+  {
+    "name": "Ioannina National Airport",
+    "code": "IOA",
+    "city": "Ioannina",
+    "country": "Greece"
+  },
+  {
+    "name": "Mytilene International Airport",
+    "code": "MJT",
+    "city": "Mytilene",
+    "country": "Greece"
+  },
+  {
+    "name": "Chios Island National Airport",
+    "code": "JKH",
+    "city": "Chios",
+    "country": "Greece"
+  },
+  {
+    "name": "Volos Nea Anchialos National Airport",
+    "code": "VOL",
+    "city": "Volos",
+    "country": "Greece"
+  },
+  {
+    "name": "Alexandroupoli International Airport",
+    "code": "AXD",
+    "city": "Alexandroupoli",
+    "country": "Greece"
+  },
+  {
+    "name": "Sitia Public Airport",
+    "code": "JSH",
+    "city": "Sitia",
+    "country": "Greece"
+  },
+  {
+    "name": "Frankfurt Airport",
+    "code": "FRA",
+    "city": "Frankfurt",
+    "country": "Germany"
+  },
+  {
+    "name": "Charles de Gaulle Airport",
+    "code": "CDG",
+    "city": "Paris",
+    "country": "France"
+  },
+  {
+    "name": "Amsterdam Airport Schiphol",
+    "code": "AMS",
+    "city": "Amsterdam",
+    "country": "Netherlands"
+  },
+  {
+    "name": "Zurich Airport",
+    "code": "ZRH",
+    "city": "Zurich",
+    "country": "Switzerland"
+  },
+  {
+    "name": "Vienna International Airport",
+    "code": "VIE",
+    "city": "Vienna",
+    "country": "Austria"
+  },
+  {
+    "name": "Brussels Airport",
+    "code": "BRU",
+    "city": "Brussels",
+    "country": "Belgium"
+  },
+  {
+    "name": "Copenhagen Airport",
+    "code": "CPH",
+    "city": "Copenhagen",
+    "country": "Denmark"
+  },
+  {
+    "name": "Munich Airport",
+    "code": "MUC",
+    "city": "Munich",
+    "country": "Germany"
+  }
+]

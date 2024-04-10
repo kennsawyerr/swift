@@ -345,6 +345,9 @@ main {
   justify-content: space-between;
   gap: 10px;
 }
+
+.flight-location :nth-child(1) {
+}
 .perks {
   cursor: pointer;
 }
@@ -847,6 +850,39 @@ article .biggerImg {
 .menu-btn {
   display: none;
 }
+
+.dropdown {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  position: absolute;
+}
+
+.dropdown:empty {
+  border: none;
+}
+.location-input {
+  text-transform: capitalize;
+}
+
+.dropdown-row {
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+  color: #000;
+  padding: 5px 15px;
+}
+
+.dropdown-row:hover {
+  background-color: #2654e4;
+  color: #fff;
+  width: 100%;
+}
+
+.search-inner {
+  display: flex;
+}
 .nav__menu {
   display: flex;
   justify-content: space-evenly;
@@ -1234,7 +1270,7 @@ aside {
   .chooseFlight-table {
     width: 100%;
     padding: 40px 10px;
-    max-width: 500px;
+    max-width: 320px;
   }
   .flight-class-levels {
     display: flex;
