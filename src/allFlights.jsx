@@ -26,7 +26,9 @@ const AllFlights = () => {
       setDisplayFlights(alreadyfilteredFlights);
       console.log("memo", "Filtered flights displayed");
     } else {
-      setFlightsMessage("no flights found");
+      setFlightsMessage(
+        `sorry no flights found .weve searched over 400 flights and none matched yours`
+      );
       console.log("memo", "No matching flights message displayed");
     }
   };
@@ -103,14 +105,17 @@ const AllFlights = () => {
             </ul>
           </div>
           <div>
-            <button onClick={() => filterFlights(travelDestination)}>
+            <button
+              className="select-flight-btn"
+              onClick={() => filterFlights(travelDestination)}
+            >
               Take Flight ?
             </button>
           </div>
         </div>
       </section>
 
-      <div className="container">{flightsMessage}</div>
+      <div className="container error-msg">{flightsMessage}</div>
       <div className="container">
         <div>
           <h3>Other Flights</h3>

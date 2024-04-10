@@ -164,6 +164,25 @@ main {
   font-size: 20px;
 }
 
+.error-msg {
+  width: 100%;
+  padding: 151px;
+  text-align: center;
+  font-size: 24px;
+
+  text-transform: capitalize;
+}
+
+.select-flight-btn {
+  width: 100%;
+  background-color: #2654e4;
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid;
+  min-width: 200px;
+  padding: 10px 20px;
+}
+
 .bestTravel {
   border-radius: 268px;
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;
@@ -290,8 +309,7 @@ main {
 }
 
 .chooseFlight-table li,
-.chooseFlight-table select,
-.chooseFlight-table button {
+.chooseFlight-table select {
   color: #000;
   /* background: linear-gradient(
     135deg,
