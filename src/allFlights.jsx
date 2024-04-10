@@ -83,7 +83,7 @@ const AllFlights = () => {
             <ul className="flight-data flex">
               <li>
                 <div className="b">From where?</div>
-                <div>Nigeria</div>
+                <div>Port Harcourt</div>
               </li>
 
               <li>
