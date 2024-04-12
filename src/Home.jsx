@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import bestTravelsFour from "./assets/dubai-trip.jpg";
 import planeImageone from "./assets/planeone.png";
 import planeImagetwo from "./assets/planetwo.png";
+import familyMinorsLounge from "./assets/family-vacation.jpeg";
 import planeImagethree from "./assets/planethree.png";
 import menuImg from "./assets/menu.png";
 import skybg from "./assets/sky.jpg";
@@ -125,23 +126,25 @@ function Home() {
               <div
                 data-aos="fade-down"
                 data-aos-duration="4000"
-                className="travel-plane-cont"
+                className=" flex travel-plane-cont"
               >
                 {/* <img
                   src={planeImageone}
                   alt="a plane picture"
                   className="travel-img travel-img-one"
                 /> */}
-                <img
-                  src={planeImagetwo}
-                  alt="a plane picture"
-                  className="travel-img travel-img-two"
-                />
-                <img
+                <div className="family-minors-image-cont">
+                  <img
+                    src={familyMinorsLounge}
+                    alt="a plane picture"
+                    className="travel-img travel-img-two"
+                  />
+                </div>
+                {/* <img
                   src={planeImagethree}
                   alt="a plane picture"
                   className="travel-img travel-img-three"
-                />
+                /> */}
               </div>
             </div>
           </section>
