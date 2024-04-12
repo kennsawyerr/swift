@@ -8,10 +8,9 @@ const AllFlights = () => {
 
   const [displayFlights, setDisplayFlights] = useState([]);
   // eslint-disable-next-line no-unused-vars
-  const [flightsMessage, setFlightsMessage] = useState("");
+  const [flightsMessage, setFlightsMessage] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [flights, setFlights] = useState("");
-  // const [memo, setMemo] = useState("");
 
   useEffect(() => {
     setDisplayFlights(flightDataFile);
@@ -26,9 +25,7 @@ const AllFlights = () => {
       setDisplayFlights(alreadyfilteredFlights);
       console.log("memo", "Filtered flights displayed");
     } else {
-      setFlightsMessage(
-        `sorry no flights found .weve searched over 400 flights and none matched yours`
-      );
+      setFlightsMessage(true);
       console.log("memo", "No matching flights message displayed");
     }
   };
@@ -115,22 +112,31 @@ const AllFlights = () => {
         </div>
       </section>
 
-      <div className="container error-msg">{flightsMessage}</div>
+      <div className="container error-msg">
+        {flightsMessage && (
+          <div>
+            <h3>No flights found</h3>
+            <div>weve searched over 400 flights</div>
+          </div>
+        )}
+      </div>
       <div className="container">
         <div>
+          <hr />
           <h3>Other Flights</h3>
           <div className="grid2">
             {displayFlights.map((item) => (
               <article key={item.id} className="flex tickets">
                 <div className="col-bl">{item.airline}</div>
                 <div>
-                  <div>{item.departure_time}</div>
+                  <div>From:</div>
                   <div>{item.departure_location}</div>
                 </div>
                 <div>
-                  <div>{item.arrival_time}</div>
+                  <div>To:</div>
                   <div>{item.destination_country}</div>
                 </div>
+                <button>Get Flight</button>
               </article>
             ))}
           </div>
@@ -141,69 +147,3 @@ const AllFlights = () => {
 };
 
 export default AllFlights;
-
-// import { useState, useEffect } from "react";
-
-// function Flights() {
-//   const [jobs, setJobs] = useState([]);
-//   const [selectedCompany, setSelectedCompany] = useState(null);
-
-//   useEffect(() => {
-//     fetchJobs();
-//   }, []);
-
-// const fetchJobs = async () => {
-//   try {
-//     const response = await fetch("https://course-api.com/react-tabs-project");
-//     const data = await response.json();
-//     setJobs(data);
-// } catch (error) {
-//   console.error("Error fetching data:", error);
-// }
-// };
-
-// const handleCompanyClick = (company) => {
-//   setSelectedCompany(company);
-// };
-
-// return (
-//   <>
-//     <div className="logistics-table">
-//       <h1>Jobs</h1>
-//       <div className="">
-//         <ul className="flex">
-//           {jobs.map((job, index) => (
-//             <li
-//               className="logistics-table li selected blue"
-//         key={index}
-//         onClick={() => handleCompanyClick(job.company)}
-//       >
-//         {job.company}
-//       </li>
-//     ))}
-//   </ul>
-// </div>
-// {selectedCompany && (
-//   <div>
-//     <h2>{selectedCompany}</h2>
-//     <div>
-//       {jobs
-//                 .filter((job) => job.company === selectedCompany)
-//                 .map((job, index) => (
-//                   <article key={index}>
-//                     <h3>{job.title}</h3>
-//                     <p>{job.dates}</p>
-//                     <ul>
-//                       {job.duties.map((duty, index) => (
-//                         <li key={index}>{duty}</li>
-//                       ))}
-//                     </ul>
-//                   </article>
-//                 ))}
-//             </div>
-//           </div>
-//         )}
-//       </div>
-//     </>
-//   );
-// }

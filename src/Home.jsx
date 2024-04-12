@@ -86,7 +86,7 @@ function Home() {
             </div>
             <div className="flex">
               <div>
-                <ul>
+                <ul data-aos="fade-up" data-aos-duration="3000">
                   <li>
                     <span className="reasons blue">01</span>
                     <h4>Travel requirements for Dubai</h4>
@@ -97,7 +97,7 @@ function Home() {
                     </p>
                   </li>
 
-                  <li>
+                  <li data-aos="fade-up" data-aos-duration="3500">
                     <span className="reasons brown">02</span>
                     <h4>Multi-risk travel insurance</h4>
                     <p>
@@ -106,7 +106,7 @@ function Home() {
                       purus felis urna tincidunt.
                     </p>
                   </li>
-                  <li>
+                  <li data-aos="fade-up" data-aos-duration="4000">
                     <span className="reasons  pink">03</span>
                     <h4>Travel requirements by destination</h4>
                     <p>
@@ -118,7 +118,11 @@ function Home() {
                 </ul>
               </div>
 
-              <div className="travel-plane-cont">
+              <div
+                data-aos="slide-right"
+                data-aos-duration="4000"
+                className="travel-plane-cont"
+              >
                 <img
                   src={planeImageone}
                   alt="a plane picture"

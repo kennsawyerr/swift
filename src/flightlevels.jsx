@@ -93,7 +93,7 @@ function FlightBooking() {
       <section className="logistics-table">
         <ul className=" flight-class-levels">
           <li onClick={economy}>Economy</li>
-          <li className="selected blue" onClick={business}>
+          <li className="selected black" onClick={business}>
             Business Class
           </li>
           <li onClick={firstClass}>First Class</li>

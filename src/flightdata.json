@@ -9,7 +9,7 @@
     "departure_time": "2024-01-25T08:00:00",
     "arrival_time": "2024-01-25T19:00:00",
     "price": 500,
-    "destination_country": "United Kingdom"
+    "destination_country": "UK"
   },
   {
     "id": 2,
@@ -29,6 +29,7 @@
     "airline": "Delta Air Lines",
     "departure_airport": "ORD",
     "arrival_airport": "SYD",
+    "departure_location": "Nigeria",
     "departure_time": "2024-01-27T09:00:00",
     "arrival_time": "2024-01-28T16:00:00",
     "price": 1200,
@@ -63,6 +64,7 @@
     "flight_number": "AF606",
     "airline": "Air France",
     "departure_airport": "CDG",
+    "departure_location": "Egypt",
     "arrival_airport": "JNB",
     "departure_time": "2024-01-30T13:00:00",
     "arrival_time": "2024-01-31T22:00:00",
@@ -74,6 +76,7 @@
     "flight_number": "EK707",
     "airline": "Emirates",
     "departure_airport": "DXB",
+    "departure_location": "Croatia",
     "arrival_airport": "JFK",
     "departure_time": "2024-01-31T14:00:00",
     "arrival_time": "2024-02-01T21:00:00",
@@ -90,7 +93,7 @@
     "departure_time": "2024-02-01T15:00:00",
     "arrival_time": "2024-02-02T18:00:00",
     "price": 850,
-    "destination_country": "Thailand"
+    "destination_country": "Lome"
   },
   {
     "id": 9,
@@ -114,7 +117,7 @@
     "departure_time": "2024-02-03T17:00:00",
     "arrival_time": "2024-02-04T08:00:00",
     "price": 700,
-    "destination_country": "United Kingdom"
+    "destination_country": "London"
   },
   {
     "id": 11,
@@ -174,7 +177,7 @@
     "departure_location": "Chicago",
     "arrival_time": "2024-02-09T10:00:00",
     "price": 700,
-    "destination_country": "United Kingdom"
+    "destination_country": "UK"
   },
   {
     "id": 16,
@@ -183,7 +186,8 @@
     "departure_location": "Chicago",
     "departure_airport": "DXB",
     "arrival_airport": "SFO",
-    "departure_time": "2024-02-09T23:"
+    "departure_time": "2024-02-09T23:",
+    "destination_country": "UK"
   },
 
   {
@@ -196,7 +200,7 @@
     "departure_time": "2024-01-25T08:00:00",
     "arrival_time": "2024-01-25T19:00:00",
     "price": 500,
-    "destination_country": "United Kingdom"
+    "destination_country": "UK"
   },
   {
     "id": 18,
