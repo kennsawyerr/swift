@@ -625,15 +625,16 @@ hr {
 .travel-img-two {
   position: absolute;
   top: 150px;
-  left: -15px;
+  left: 33px;
 
   z-index: 80;
 }
 .travel-img-three {
   position: absolute;
   top: 150px;
-  right: -15px;
+  right: 15px;
 }
+
 .travel-supp {
   margin: 0 auto 60px;
 }
@@ -997,6 +998,19 @@ aside {
     min-width: 300px;
   }
 
+  .travel-img-two {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+
+    z-index: 80;
+  }
+  .travel-img-three {
+    position: absolute;
+    top: 150px;
+    right: 15px;
+  }
+
   .flight-location {
     width: 300px;
   }
@@ -1220,6 +1234,20 @@ aside {
     max-width: 800px;
     overflow: hidden;
     margin: 0 auto;
+  }
+
+  .travel-img-two {
+    position: absolute;
+    top: 150px;
+    left: -34px;
+
+    z-index: 80;
+  }
+
+  .travel-img-three {
+    position: absolute;
+    top: 150px;
+    right: -23px;
   }
 
   .nav li {
