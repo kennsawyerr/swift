@@ -127,11 +127,11 @@ function Home() {
                 data-aos-duration="4000"
                 className="travel-plane-cont"
               >
-                <img
+                {/* <img
                   src={planeImageone}
                   alt="a plane picture"
                   className="travel-img travel-img-one"
-                />
+                /> */}
                 <img
                   src={planeImagetwo}
                   alt="a plane picture"
