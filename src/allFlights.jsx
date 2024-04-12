@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import flightDataFile from "./flightdata.json";
 import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const AllFlights = () => {
   //[] means initialised with an empty array
 
@@ -112,7 +113,10 @@ const AllFlights = () => {
         </div>
       </section>
 
-      <div className="container error-msg">
+      <div
+        style={{ display: flightsMessage ? "block" : "none" }}
+        className="container error-msg"
+      >
         {flightsMessage && (
           <div>
             <h3>No flights found</h3>
@@ -123,20 +127,33 @@ const AllFlights = () => {
       <div className="container">
         <div>
           <hr />
-          <h3>Other Flights</h3>
+          <div className="flex">
+            <h3>Other Flights</h3>
+            <h3>
+              {" "}
+              <NavLink to="/" className="nav-link">
+                Go Home
+              </NavLink>
+            </h3>
+          </div>
           <div className="grid2">
             {displayFlights.map((item) => (
-              <article key={item.id} className="flex tickets">
-                <div className="col-bl">{item.airline}</div>
-                <div>
-                  <div>From:</div>
-                  <div>{item.departure_location}</div>
+              <article key={item.id} className="">
+                <div className="flex tickets">
+                  <div className="col-bl">{item.airline}</div>
+                  <div>
+                    <div>From:</div>
+                    <div>{item.departure_location}</div>
+                  </div>
+                  <div>
+                    <div>To:</div>
+                    <div>{item.destination_country}</div>
+                  </div>
+                  <NavLink to="/pricing">
+                    {" "}
+                    <button className="get-flight-btn">Get Flight</button>
+                  </NavLink>
                 </div>
-                <div>
-                  <div>To:</div>
-                  <div>{item.destination_country}</div>
-                </div>
-                <button>Get Flight</button>
               </article>
             ))}
           </div>

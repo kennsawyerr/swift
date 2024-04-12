@@ -35,8 +35,6 @@ function Home() {
             <h1>
               Travel to <span>make memories</span> all around the world
             </h1>
-
-            <button>View all</button>
           </div>
           <div className="cont-cards">
             <div className="cards">

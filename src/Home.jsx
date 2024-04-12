@@ -29,9 +29,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Home() {
-  // useEffect(() => {
-  //   AOS.init({ duration: 2000 });
-  // }, []);
+  const [messages, setMessages] = useState(false);
+  const comingSoon = () => {
+    setMessages(true);
+    setTimeout(() => {
+      setMessages(false);
+    }, 2000);
+  };
   useEffect(() => {
     AOS.init();
   }, []);
@@ -119,7 +123,7 @@ function Home() {
               </div>
 
               <div
-                data-aos="slide-right"
+                data-aos="fade-down"
                 data-aos-duration="4000"
                 className="travel-plane-cont"
               >
@@ -156,7 +160,7 @@ function Home() {
               Unaccompanied <span>Minors Lounge</span>
             </h2>
             <ul className="grid">
-              <li>
+              <li data-aos="fade-up" data-aos-duration="3500">
                 <h4>Help through the airport</h4>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Rutrum mi quisque diam
@@ -164,15 +168,15 @@ function Home() {
                 </p>
               </li>
 
-              <li>
-                <h4>Priority boarding</h4>{" "}
+              <li data-aos="fade-up" data-aos-duration="3500">
+                <h4>Priority boarding</h4>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Rutrum mi quisque diam
                   dign
                 </p>
               </li>
 
-              <li>
+              <li data-aos="fade-up" data-aos-duration="3500">
                 <h4>Care on the flight</h4>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Rutrum mi quisque diam
@@ -180,8 +184,8 @@ function Home() {
                 </p>
               </li>
 
-              <li>
-                <h4>Support when they land</h4>{" "}
+              <li data-aos="fade-up" data-aos-duration="3500">
+                <h4>Support when they land</h4>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Rutrum mi quisque diam
                   dign
@@ -195,7 +199,7 @@ function Home() {
 
         <section className="newsletter">
           <div className="container">
-            <h1>
+            <h1 data-aos="fade-up" data-aos-duration="2500">
               Subscribe to our Newsletter &<span> get latest News</span>
             </h1>
 

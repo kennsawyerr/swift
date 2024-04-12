@@ -21,6 +21,13 @@ function FlightBooking() {
   const [passengerValue, setPassengerValue] = useState(1);
   const [travelDestination, setTravelDestination] = useState("");
 
+  const [messages, setMessages] = useState(false);
+  const comingSoon = () => {
+    setMessages(true);
+    setTimeout(() => {
+      setMessages(false);
+    }, 2000);
+  };
   const economy = () => {
     setShowAppetizers(false);
     setShowAmenities(false);
@@ -155,7 +162,7 @@ function FlightBooking() {
             <div className="travellers-textbx">
               <h3>Travellers</h3>
 
-              <aside className="">
+              <aside className="passenger-flex">
                 <MinusSquare color="#2654E4" onClick={minusNum} />
                 <div>{passengerValue} </div>
                 <AddSquare color="#2654E4" onClick={addNum} />
@@ -229,11 +236,12 @@ function FlightBooking() {
             </h3>
           </li>
           <li
-            onClick=""
+            onClick={comingSoon}
             id="seats"
             style={{ display: showSeats ? "block" : "none" }}
           >
             <h3>Seats</h3>
+            {messages && <p className="soon-small">Coming soon..</p>}
           </li>
         </ul>
       </section>

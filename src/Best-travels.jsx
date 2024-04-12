@@ -34,7 +34,7 @@ function BestTravel() {
         <div className="container">
           <h3>
             {" "}
-            <span>Best travels</span> of the month
+            <span>Top travels</span> of the month!
           </h3>
 
           <div className="traveling-cont">

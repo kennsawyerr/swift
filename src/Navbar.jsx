@@ -16,7 +16,7 @@ function Navbar() {
     setMessages(true);
     setTimeout(() => {
       setMessages(false);
-    }, 2000); // 2000 milliseconds = 2 seconds
+    }, 2000);
   };
 
   return (
@@ -40,6 +40,7 @@ function Navbar() {
               <div className="logo-header_sub-mini">FLIGHT BOOKING AGENCY</div>
             </div>
           </div>
+
           <ul className={`nav__menu ${collapse ? "collapse-nav" : ""}`}>
             <li onClick={toggleNavbar} className="marginal">
               Support
@@ -56,7 +57,7 @@ function Navbar() {
               Sign in
             </li>
 
-            <li className="show">
+            <li className="show" onClick={toggleNavbar}>
               <NavLink className="nav-link" to="/">
                 Home
               </NavLink>

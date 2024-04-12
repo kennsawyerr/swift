@@ -15,6 +15,7 @@ import Restaurant from "./Restaurant";
 import Rant from "./rant";
 import BestTravel from "./Best-travels";
 import Footer from "./Footer";
+import Pricing from "./Pricing";
 function App() {
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
             <Route path="/restaurant" element={<Restaurant />} />
             <Route path="/snacks" element={<Rant />} />
             <Route path="/best-travels" element={<BestTravel />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </Router>
 
