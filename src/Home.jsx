@@ -63,7 +63,7 @@ function Home() {
             <li>Destination</li>
           </ul>
 
-          <button className=" hide contact-btn"> Contact</button>
+          <button className=" hide contact-btn"> Sign up</button>
         </div>
       </div>
       <main>

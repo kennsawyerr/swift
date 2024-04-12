@@ -51,7 +51,7 @@ function Navbar() {
             </li>
 
             <li onClick={toggleNavbar} className="margin-l">
-              Sign up
+              Contact
             </li>
             <li onClick={toggleNavbar} className="">
               Sign in
