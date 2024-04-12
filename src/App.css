@@ -1002,6 +1002,11 @@ aside {
   padding-bottom: 10px;
 }
 
+.newsletter-h1 {
+  padding: 10px;
+  font-size: 21px;
+}
+
 @media screen and (max-width: 600px) {
   .logistics-table {
     width: 100%;
@@ -1099,6 +1104,7 @@ aside {
 
   .newsletter {
     padding: 10px;
+    font-size: 20px;
   }
   .container {
     width: 100%;

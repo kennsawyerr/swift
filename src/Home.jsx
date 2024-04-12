@@ -202,7 +202,11 @@ function Home() {
 
         <section className="newsletter">
           <div className="container">
-            <h1 data-aos="fade-up" data-aos-duration="2500">
+            <h1
+              className="newsletter-h1"
+              data-aos="fade-up"
+              data-aos-duration="2500"
+            >
               Subscribe to our Newsletter &<span> get latest News</span>
             </h1>
 
