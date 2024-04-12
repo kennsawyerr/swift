@@ -112,6 +112,21 @@ main {
   line-height: normal;
 }
 
+.comingsoon-msg {
+  position: absolute;
+  background-color: #2654e4;
+  color: #000;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 20px;
+  top: 50px;
+  width: 200px;
+  border: 1px none;
+  z-index: 1000;
+}
+
 .logo-header_sub-mini {
   color: #000;
   font-family: "Inter";
@@ -130,6 +145,14 @@ main {
   line-height: normal;
 }
 
+.travel-img-one {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+}
+
 .logistics-table {
   display: flex;
   margin: 0 auto;
@@ -139,10 +162,30 @@ main {
   align-items: center;
   justify-self: center;
   gap: 48px;
+  right: 50%;
+  transition: 0.4s ease-in;
   border-radius: 24px;
   border: 1px solid #dcdcdc;
   background: #fff;
+  position: relative;
+
+  left: 0;
+  right: 0;
+  margin: auto;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+  animation: animated 2.3s infinite;
+}
+
+@keyframes animation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .snacks-cont {
@@ -485,6 +528,7 @@ ul {
 }
 .hero-text {
   color: #000;
+  padding: 50px 0;
   text-align: center;
   font-family: "Inter";
   font-size: 64px;
@@ -555,17 +599,6 @@ hr {
   /* flex-shrink: 0; */
 }
 
-.travel-img-one {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .travel-img-two {
   position: absolute;
   top: 150px;
@@ -775,12 +808,6 @@ article .biggerImg {
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 .card {

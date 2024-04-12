@@ -24,10 +24,19 @@ import Memories from "./Memories";
 import BestTravel from "./Best-travels";
 import Loader from "./Loader";
 
+//animation
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Home() {
+  // useEffect(() => {
+  //   AOS.init({ duration: 2000 });
+  // }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
-      <Loader />
       <div className="container">
         <div className="main-navbar  flex">
           <div className="hide">
@@ -54,7 +63,7 @@ function Home() {
       </div>
       <main>
         <div className="container">
-          <h1 className="hero-text">
+          <h1 data-aos="fade-up" data-aos-duration="2500" className="hero-text">
             Find and Book
             <span>A Great Experience</span>
           </h1>

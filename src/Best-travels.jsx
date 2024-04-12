@@ -67,7 +67,8 @@ function BestTravel() {
                 <div className="image-mth-cont">
                   <img src={bestTravelsOne} alt="" className="month-img" />
                 </div>
-                <h5>Queen Ndubuisi</h5>
+
+                <h5>Anita Smith</h5>
                 <p>Lorem ipsum</p>
               </li>
             </ul>

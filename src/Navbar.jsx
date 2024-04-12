@@ -9,19 +9,22 @@ function Navbar() {
   const toggleNavbar = () => {
     setCollapse(!collapse);
   };
-  const [messages, setMessages] = useState("");
-
-  const userMessages = () => {
-    setMessages("Coming soon.. no worry");
-  };
+  const [messages, setMessages] = useState(false);
 
   const comingSoon = () => {
-    userMessages("Coming soon");
+    toggleNavbar();
+    setMessages(true);
+    setTimeout(() => {
+      setMessages(false);
+    }, 2000); // 2000 milliseconds = 2 seconds
   };
+
   return (
     <>
       <nav>
-        <div>{messages}</div>
+        <div className="comingsoon-msg">
+          {messages && <h3>Coming soon.. no worry</h3>}
+        </div>
         <div className=" flex">
           <div className=" container navigation">
             <div className="menu-btn">
@@ -38,23 +41,38 @@ function Navbar() {
             </div>
           </div>
           <ul className={`nav__menu ${collapse ? "collapse-nav" : ""}`}>
-            <li className="marginal">Support</li>
-            <li className="marginal-right"> Languages</li>
+            <li onClick={toggleNavbar} className="marginal">
+              Support
+            </li>
+            <li onClick={toggleNavbar} className="marginal-right">
+              {" "}
+              Languages
+            </li>
 
-            <li className="margin-l">Sign up</li>
-            <li className="">Sign in</li>
+            <li onClick={toggleNavbar} className="margin-l">
+              Sign up
+            </li>
+            <li onClick={toggleNavbar} className="">
+              Sign in
+            </li>
 
             <li className="show">
               <NavLink className="nav-link" to="/">
                 Home
               </NavLink>
             </li>
-            <li className="show">About</li>
-            <li className="show">Offers</li>
+            <li onClick={toggleNavbar} className="show">
+              About
+            </li>
+            <li onClick={toggleNavbar} className="show">
+              Offers
+            </li>
             <li className="show" onClick={comingSoon}>
               Seats
             </li>
-            <li className="show">Destination</li>
+            <li onClick={toggleNavbar} className="show">
+              Destination
+            </li>
           </ul>
         </div>
       </nav>

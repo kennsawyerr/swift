@@ -4,7 +4,7 @@ import userIcon from "./assets/user.png";
 import calendar from "./assets/calendar.png";
 import locationIcon from "./assets/location-marker-icon.png";
 import airportData from "./airports.json";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 //use normal date not react date picker for your sanity
 import { AddSquare, MinusSquare } from "iconsax-react";
 // import ReactDatePicker from "react-datepicker";
@@ -99,7 +99,11 @@ function FlightBooking() {
           <li onClick={firstClass}>First Class</li>
         </ul>
 
-        <ul className="flex flight-location">
+        <ul
+          data-aos="fade-up"
+          data-aos-duration="2500"
+          className="flex flight-location"
+        >
           <li>
             <div>
               <img src={locationIcon} />
@@ -201,13 +205,15 @@ function FlightBooking() {
         </ul>
 
         <ul className="flex flight-location">
-          <li
-            className="perks"
-            id="appetizers"
-            style={{ display: showAppetizers ? "block" : "none" }}
-          >
-            <h3>Appetizers</h3>
-          </li>
+          <NavLink to="/snacks" className="nav-link">
+            <li
+              className="perks"
+              id="appetizers"
+              style={{ display: showAppetizers ? "block" : "none" }}
+            >
+              <h3>Appetizers</h3>
+            </li>
+          </NavLink>
           {/* 8119ce555bb415fcc7b18ae31ef9921f43d33f860db1b77278f6c31f6a1540ba503913dcf4a9eddd5c25b3df61294fff */}
           <li
             id="amenities"
@@ -222,7 +228,11 @@ function FlightBooking() {
               </select>
             </h3>
           </li>
-          <li id="seats" style={{ display: showSeats ? "block" : "none" }}>
+          <li
+            onClick=""
+            id="seats"
+            style={{ display: showSeats ? "block" : "none" }}
+          >
             <h3>Seats</h3>
           </li>
         </ul>

@@ -25,7 +25,6 @@ const Rant = () => {
       <section className="snacks-cont container">
         <h1>What Would you like to have?</h1>
 
-        <h2>Meals. snacks . Desserts</h2>
         <div className="flex  snacks_flex">
           {meals.map((meal) => (
             <div key={meal.idMeal} className="snacks">
