@@ -570,7 +570,7 @@ ul {
 }
 .img-cont {
   position: relative;
-  width: 1276px;
+  max-width: 1276px;
   height: 403px;
 
   border-radius: 400px;
@@ -585,8 +585,10 @@ ul {
 }
 .plane {
   position: absolute;
-  top: -130px;
+  top: -11%;
+  width: 100%;
   left: 0;
+  right: 0;
 }
 
 .confidence {
